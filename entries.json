@@ -1,0 +1,2000 @@
+[
+  {
+    "slug": "amazon-uk",
+    "title": "Amazon UK FBA Profit Calculator",
+    "desc": "Calculate UK Amazon FBA profits with UK fees and VAT. Free for entrepreneurs.",
+    "fields": [
+      {
+        "id": "price",
+        "label": "Revenue",
+        "placeholder": "100",
+        "prefix": "$"
+      },
+      {
+        "id": "cost",
+        "label": "Cost",
+        "placeholder": "50",
+        "prefix": "$"
+      },
+      {
+        "id": "shipping",
+        "label": "Expenses",
+        "placeholder": "10",
+        "prefix": "$"
+      },
+      {
+        "id": "fee",
+        "label": "Fee (%)",
+        "placeholder": "10",
+        "suffix": "%"
+      },
+      {
+        "id": "ads",
+        "label": "Other",
+        "placeholder": "5",
+        "prefix": "$"
+      }
+    ],
+    "results": [
+      {
+        "id": "profit",
+        "label": "Net Profit",
+        "prefix": "$"
+      },
+      {
+        "id": "margin",
+        "label": "Margin",
+        "prefix": ""
+      },
+      {
+        "id": "roi",
+        "label": "ROI",
+        "prefix": ""
+      }
+    ]
+  },
+  {
+    "slug": "amazon-canada",
+    "title": "Amazon Canada FBA Profit Calculator",
+    "desc": "Calculate Canadian Amazon seller profits including GST. Free for entrepreneurs.",
+    "fields": [
+      {
+        "id": "price",
+        "label": "Revenue",
+        "placeholder": "100",
+        "prefix": "$"
+      },
+      {
+        "id": "cost",
+        "label": "Cost",
+        "placeholder": "50",
+        "prefix": "$"
+      },
+      {
+        "id": "shipping",
+        "label": "Expenses",
+        "placeholder": "10",
+        "prefix": "$"
+      },
+      {
+        "id": "fee",
+        "label": "Fee (%)",
+        "placeholder": "10",
+        "suffix": "%"
+      },
+      {
+        "id": "ads",
+        "label": "Other",
+        "placeholder": "5",
+        "prefix": "$"
+      }
+    ],
+    "results": [
+      {
+        "id": "profit",
+        "label": "Net Profit",
+        "prefix": "$"
+      },
+      {
+        "id": "margin",
+        "label": "Margin",
+        "prefix": ""
+      },
+      {
+        "id": "roi",
+        "label": "ROI",
+        "prefix": ""
+      }
+    ]
+  },
+  {
+    "slug": "ebay-uk",
+    "title": "eBay UK Profit Calculator",
+    "desc": "Calculate eBay UK selling profits including final value fees. Free for entrepreneurs.",
+    "fields": [
+      {
+        "id": "price",
+        "label": "Revenue",
+        "placeholder": "100",
+        "prefix": "$"
+      },
+      {
+        "id": "cost",
+        "label": "Cost",
+        "placeholder": "50",
+        "prefix": "$"
+      },
+      {
+        "id": "shipping",
+        "label": "Expenses",
+        "placeholder": "10",
+        "prefix": "$"
+      },
+      {
+        "id": "fee",
+        "label": "Fee (%)",
+        "placeholder": "10",
+        "suffix": "%"
+      },
+      {
+        "id": "ads",
+        "label": "Other",
+        "placeholder": "5",
+        "prefix": "$"
+      }
+    ],
+    "results": [
+      {
+        "id": "profit",
+        "label": "Net Profit",
+        "prefix": "$"
+      },
+      {
+        "id": "margin",
+        "label": "Margin",
+        "prefix": ""
+      },
+      {
+        "id": "roi",
+        "label": "ROI",
+        "prefix": ""
+      }
+    ]
+  },
+  {
+    "slug": "jewelry",
+    "title": "Jewelry Business Profit Calculator",
+    "desc": "Calculate jewelry business profits including material costs. Free for entrepreneurs.",
+    "fields": [
+      {
+        "id": "price",
+        "label": "Revenue",
+        "placeholder": "100",
+        "prefix": "$"
+      },
+      {
+        "id": "cost",
+        "label": "Cost",
+        "placeholder": "50",
+        "prefix": "$"
+      },
+      {
+        "id": "shipping",
+        "label": "Expenses",
+        "placeholder": "10",
+        "prefix": "$"
+      },
+      {
+        "id": "fee",
+        "label": "Fee (%)",
+        "placeholder": "10",
+        "suffix": "%"
+      },
+      {
+        "id": "ads",
+        "label": "Other",
+        "placeholder": "5",
+        "prefix": "$"
+      }
+    ],
+    "results": [
+      {
+        "id": "profit",
+        "label": "Net Profit",
+        "prefix": "$"
+      },
+      {
+        "id": "margin",
+        "label": "Margin",
+        "prefix": ""
+      },
+      {
+        "id": "roi",
+        "label": "ROI",
+        "prefix": ""
+      }
+    ]
+  },
+  {
+    "slug": "clothing",
+    "title": "Clothing Brand Profit Calculator",
+    "desc": "Calculate clothing line profits with manufacturing and shipping. Free for entrepreneurs.",
+    "fields": [
+      {
+        "id": "price",
+        "label": "Revenue",
+        "placeholder": "100",
+        "prefix": "$"
+      },
+      {
+        "id": "cost",
+        "label": "Cost",
+        "placeholder": "50",
+        "prefix": "$"
+      },
+      {
+        "id": "shipping",
+        "label": "Expenses",
+        "placeholder": "10",
+        "prefix": "$"
+      },
+      {
+        "id": "fee",
+        "label": "Fee (%)",
+        "placeholder": "10",
+        "suffix": "%"
+      },
+      {
+        "id": "ads",
+        "label": "Other",
+        "placeholder": "5",
+        "prefix": "$"
+      }
+    ],
+    "results": [
+      {
+        "id": "profit",
+        "label": "Net Profit",
+        "prefix": "$"
+      },
+      {
+        "id": "margin",
+        "label": "Margin",
+        "prefix": ""
+      },
+      {
+        "id": "roi",
+        "label": "ROI",
+        "prefix": ""
+      }
+    ]
+  },
+  {
+    "slug": "handmade",
+    "title": "Handmade Products Profit Calculator",
+    "desc": "Calculate profits for handmade crafts on Etsy. Free for entrepreneurs.",
+    "fields": [
+      {
+        "id": "price",
+        "label": "Revenue",
+        "placeholder": "100",
+        "prefix": "$"
+      },
+      {
+        "id": "cost",
+        "label": "Cost",
+        "placeholder": "50",
+        "prefix": "$"
+      },
+      {
+        "id": "shipping",
+        "label": "Expenses",
+        "placeholder": "10",
+        "prefix": "$"
+      },
+      {
+        "id": "fee",
+        "label": "Fee (%)",
+        "placeholder": "10",
+        "suffix": "%"
+      },
+      {
+        "id": "ads",
+        "label": "Other",
+        "placeholder": "5",
+        "prefix": "$"
+      }
+    ],
+    "results": [
+      {
+        "id": "profit",
+        "label": "Net Profit",
+        "prefix": "$"
+      },
+      {
+        "id": "margin",
+        "label": "Margin",
+        "prefix": ""
+      },
+      {
+        "id": "roi",
+        "label": "ROI",
+        "prefix": ""
+      }
+    ]
+  },
+  {
+    "slug": "sneakers",
+    "title": "Sneaker Reselling Profit Calculator",
+    "desc": "Calculate sneaker flip profits with StockX fees. Free for entrepreneurs.",
+    "fields": [
+      {
+        "id": "price",
+        "label": "Revenue",
+        "placeholder": "100",
+        "prefix": "$"
+      },
+      {
+        "id": "cost",
+        "label": "Cost",
+        "placeholder": "50",
+        "prefix": "$"
+      },
+      {
+        "id": "shipping",
+        "label": "Expenses",
+        "placeholder": "10",
+        "prefix": "$"
+      },
+      {
+        "id": "fee",
+        "label": "Fee (%)",
+        "placeholder": "10",
+        "suffix": "%"
+      },
+      {
+        "id": "ads",
+        "label": "Other",
+        "placeholder": "5",
+        "prefix": "$"
+      }
+    ],
+    "results": [
+      {
+        "id": "profit",
+        "label": "Net Profit",
+        "prefix": "$"
+      },
+      {
+        "id": "margin",
+        "label": "Margin",
+        "prefix": ""
+      },
+      {
+        "id": "roi",
+        "label": "ROI",
+        "prefix": ""
+      }
+    ]
+  },
+  {
+    "slug": "books",
+    "title": "Book Reselling Profit Calculator",
+    "desc": "Calculate used book selling profits on Amazon and eBay. Free for entrepreneurs.",
+    "fields": [
+      {
+        "id": "price",
+        "label": "Revenue",
+        "placeholder": "100",
+        "prefix": "$"
+      },
+      {
+        "id": "cost",
+        "label": "Cost",
+        "placeholder": "50",
+        "prefix": "$"
+      },
+      {
+        "id": "shipping",
+        "label": "Expenses",
+        "placeholder": "10",
+        "prefix": "$"
+      },
+      {
+        "id": "fee",
+        "label": "Fee (%)",
+        "placeholder": "10",
+        "suffix": "%"
+      },
+      {
+        "id": "ads",
+        "label": "Other",
+        "placeholder": "5",
+        "prefix": "$"
+      }
+    ],
+    "results": [
+      {
+        "id": "profit",
+        "label": "Net Profit",
+        "prefix": "$"
+      },
+      {
+        "id": "margin",
+        "label": "Margin",
+        "prefix": ""
+      },
+      {
+        "id": "roi",
+        "label": "ROI",
+        "prefix": ""
+      }
+    ]
+  },
+  {
+    "slug": "electronics",
+    "title": "Electronics Reselling Profit Calculator",
+    "desc": "Calculate profits from flipping phones and laptops. Free for entrepreneurs.",
+    "fields": [
+      {
+        "id": "price",
+        "label": "Revenue",
+        "placeholder": "100",
+        "prefix": "$"
+      },
+      {
+        "id": "cost",
+        "label": "Cost",
+        "placeholder": "50",
+        "prefix": "$"
+      },
+      {
+        "id": "shipping",
+        "label": "Expenses",
+        "placeholder": "10",
+        "prefix": "$"
+      },
+      {
+        "id": "fee",
+        "label": "Fee (%)",
+        "placeholder": "10",
+        "suffix": "%"
+      },
+      {
+        "id": "ads",
+        "label": "Other",
+        "placeholder": "5",
+        "prefix": "$"
+      }
+    ],
+    "results": [
+      {
+        "id": "profit",
+        "label": "Net Profit",
+        "prefix": "$"
+      },
+      {
+        "id": "margin",
+        "label": "Margin",
+        "prefix": ""
+      },
+      {
+        "id": "roi",
+        "label": "ROI",
+        "prefix": ""
+      }
+    ]
+  },
+  {
+    "slug": "furniture",
+    "title": "Furniture Flipping Profit Calculator",
+    "desc": "Calculate furniture restoration and resell profits. Free for entrepreneurs.",
+    "fields": [
+      {
+        "id": "price",
+        "label": "Revenue",
+        "placeholder": "100",
+        "prefix": "$"
+      },
+      {
+        "id": "cost",
+        "label": "Cost",
+        "placeholder": "50",
+        "prefix": "$"
+      },
+      {
+        "id": "shipping",
+        "label": "Expenses",
+        "placeholder": "10",
+        "prefix": "$"
+      },
+      {
+        "id": "fee",
+        "label": "Fee (%)",
+        "placeholder": "10",
+        "suffix": "%"
+      },
+      {
+        "id": "ads",
+        "label": "Other",
+        "placeholder": "5",
+        "prefix": "$"
+      }
+    ],
+    "results": [
+      {
+        "id": "profit",
+        "label": "Net Profit",
+        "prefix": "$"
+      },
+      {
+        "id": "margin",
+        "label": "Margin",
+        "prefix": ""
+      },
+      {
+        "id": "roi",
+        "label": "ROI",
+        "prefix": ""
+      }
+    ]
+  },
+  {
+    "slug": "digital-products",
+    "title": "Digital Products Profit Calculator",
+    "desc": "Calculate profits from ebooks, courses, and downloads. Free for entrepreneurs.",
+    "fields": [
+      {
+        "id": "price",
+        "label": "Revenue",
+        "placeholder": "100",
+        "prefix": "$"
+      },
+      {
+        "id": "cost",
+        "label": "Cost",
+        "placeholder": "50",
+        "prefix": "$"
+      },
+      {
+        "id": "shipping",
+        "label": "Expenses",
+        "placeholder": "10",
+        "prefix": "$"
+      },
+      {
+        "id": "fee",
+        "label": "Fee (%)",
+        "placeholder": "10",
+        "suffix": "%"
+      },
+      {
+        "id": "ads",
+        "label": "Other",
+        "placeholder": "5",
+        "prefix": "$"
+      }
+    ],
+    "results": [
+      {
+        "id": "profit",
+        "label": "Net Profit",
+        "prefix": "$"
+      },
+      {
+        "id": "margin",
+        "label": "Margin",
+        "prefix": ""
+      },
+      {
+        "id": "roi",
+        "label": "ROI",
+        "prefix": ""
+      }
+    ]
+  },
+  {
+    "slug": "subscription-box",
+    "title": "Subscription Box Profit Calculator",
+    "desc": "Calculate subscription box business profits. Free for entrepreneurs.",
+    "fields": [
+      {
+        "id": "price",
+        "label": "Revenue",
+        "placeholder": "100",
+        "prefix": "$"
+      },
+      {
+        "id": "cost",
+        "label": "Cost",
+        "placeholder": "50",
+        "prefix": "$"
+      },
+      {
+        "id": "shipping",
+        "label": "Expenses",
+        "placeholder": "10",
+        "prefix": "$"
+      },
+      {
+        "id": "fee",
+        "label": "Fee (%)",
+        "placeholder": "10",
+        "suffix": "%"
+      },
+      {
+        "id": "ads",
+        "label": "Other",
+        "placeholder": "5",
+        "prefix": "$"
+      }
+    ],
+    "results": [
+      {
+        "id": "profit",
+        "label": "Net Profit",
+        "prefix": "$"
+      },
+      {
+        "id": "margin",
+        "label": "Margin",
+        "prefix": ""
+      },
+      {
+        "id": "roi",
+        "label": "ROI",
+        "prefix": ""
+      }
+    ]
+  },
+  {
+    "slug": "coffee-shop",
+    "title": "Coffee Shop Profit Calculator",
+    "desc": "Calculate coffee shop drink and food profitability. Free for entrepreneurs.",
+    "fields": [
+      {
+        "id": "price",
+        "label": "Revenue",
+        "placeholder": "100",
+        "prefix": "$"
+      },
+      {
+        "id": "cost",
+        "label": "Cost",
+        "placeholder": "50",
+        "prefix": "$"
+      },
+      {
+        "id": "shipping",
+        "label": "Expenses",
+        "placeholder": "10",
+        "prefix": "$"
+      },
+      {
+        "id": "fee",
+        "label": "Fee (%)",
+        "placeholder": "10",
+        "suffix": "%"
+      },
+      {
+        "id": "ads",
+        "label": "Other",
+        "placeholder": "5",
+        "prefix": "$"
+      }
+    ],
+    "results": [
+      {
+        "id": "profit",
+        "label": "Net Profit",
+        "prefix": "$"
+      },
+      {
+        "id": "margin",
+        "label": "Margin",
+        "prefix": ""
+      },
+      {
+        "id": "roi",
+        "label": "ROI",
+        "prefix": ""
+      }
+    ]
+  },
+  {
+    "slug": "food-truck",
+    "title": "Food Truck Profit Calculator",
+    "desc": "Calculate food truck operating profits and margins. Free for entrepreneurs.",
+    "fields": [
+      {
+        "id": "price",
+        "label": "Revenue",
+        "placeholder": "100",
+        "prefix": "$"
+      },
+      {
+        "id": "cost",
+        "label": "Cost",
+        "placeholder": "50",
+        "prefix": "$"
+      },
+      {
+        "id": "shipping",
+        "label": "Expenses",
+        "placeholder": "10",
+        "prefix": "$"
+      },
+      {
+        "id": "fee",
+        "label": "Fee (%)",
+        "placeholder": "10",
+        "suffix": "%"
+      },
+      {
+        "id": "ads",
+        "label": "Other",
+        "placeholder": "5",
+        "prefix": "$"
+      }
+    ],
+    "results": [
+      {
+        "id": "profit",
+        "label": "Net Profit",
+        "prefix": "$"
+      },
+      {
+        "id": "margin",
+        "label": "Margin",
+        "prefix": ""
+      },
+      {
+        "id": "roi",
+        "label": "ROI",
+        "prefix": ""
+      }
+    ]
+  },
+  {
+    "slug": "gym",
+    "title": "Gym & Fitness Profit Calculator",
+    "desc": "Calculate gym membership profit and training margins. Free for entrepreneurs.",
+    "fields": [
+      {
+        "id": "price",
+        "label": "Revenue",
+        "placeholder": "100",
+        "prefix": "$"
+      },
+      {
+        "id": "cost",
+        "label": "Cost",
+        "placeholder": "50",
+        "prefix": "$"
+      },
+      {
+        "id": "shipping",
+        "label": "Expenses",
+        "placeholder": "10",
+        "prefix": "$"
+      },
+      {
+        "id": "fee",
+        "label": "Fee (%)",
+        "placeholder": "10",
+        "suffix": "%"
+      },
+      {
+        "id": "ads",
+        "label": "Other",
+        "placeholder": "5",
+        "prefix": "$"
+      }
+    ],
+    "results": [
+      {
+        "id": "profit",
+        "label": "Net Profit",
+        "prefix": "$"
+      },
+      {
+        "id": "margin",
+        "label": "Margin",
+        "prefix": ""
+      },
+      {
+        "id": "roi",
+        "label": "ROI",
+        "prefix": ""
+      }
+    ]
+  },
+  {
+    "slug": "vending-machine",
+    "title": "Vending Machine Profit Calculator",
+    "desc": "Calculate vending machine location profits. Free for entrepreneurs.",
+    "fields": [
+      {
+        "id": "price",
+        "label": "Revenue",
+        "placeholder": "100",
+        "prefix": "$"
+      },
+      {
+        "id": "cost",
+        "label": "Cost",
+        "placeholder": "50",
+        "prefix": "$"
+      },
+      {
+        "id": "shipping",
+        "label": "Expenses",
+        "placeholder": "10",
+        "prefix": "$"
+      },
+      {
+        "id": "fee",
+        "label": "Fee (%)",
+        "placeholder": "10",
+        "suffix": "%"
+      },
+      {
+        "id": "ads",
+        "label": "Other",
+        "placeholder": "5",
+        "prefix": "$"
+      }
+    ],
+    "results": [
+      {
+        "id": "profit",
+        "label": "Net Profit",
+        "prefix": "$"
+      },
+      {
+        "id": "margin",
+        "label": "Margin",
+        "prefix": ""
+      },
+      {
+        "id": "roi",
+        "label": "ROI",
+        "prefix": ""
+      }
+    ]
+  },
+  {
+    "slug": "airbnb",
+    "title": "Airbnb Rental Profit Calculator",
+    "desc": "Calculate Airbnb rental profits after fees. Free for entrepreneurs.",
+    "fields": [
+      {
+        "id": "price",
+        "label": "Revenue",
+        "placeholder": "100",
+        "prefix": "$"
+      },
+      {
+        "id": "cost",
+        "label": "Cost",
+        "placeholder": "50",
+        "prefix": "$"
+      },
+      {
+        "id": "shipping",
+        "label": "Expenses",
+        "placeholder": "10",
+        "prefix": "$"
+      },
+      {
+        "id": "fee",
+        "label": "Fee (%)",
+        "placeholder": "10",
+        "suffix": "%"
+      },
+      {
+        "id": "ads",
+        "label": "Other",
+        "placeholder": "5",
+        "prefix": "$"
+      }
+    ],
+    "results": [
+      {
+        "id": "profit",
+        "label": "Net Profit",
+        "prefix": "$"
+      },
+      {
+        "id": "margin",
+        "label": "Margin",
+        "prefix": ""
+      },
+      {
+        "id": "roi",
+        "label": "ROI",
+        "prefix": ""
+      }
+    ]
+  },
+  {
+    "slug": "cleaning-business",
+    "title": "Cleaning Business Profit Calculator",
+    "desc": "Calculate residential cleaning service profits. Free for entrepreneurs.",
+    "fields": [
+      {
+        "id": "price",
+        "label": "Revenue",
+        "placeholder": "100",
+        "prefix": "$"
+      },
+      {
+        "id": "cost",
+        "label": "Cost",
+        "placeholder": "50",
+        "prefix": "$"
+      },
+      {
+        "id": "shipping",
+        "label": "Expenses",
+        "placeholder": "10",
+        "prefix": "$"
+      },
+      {
+        "id": "fee",
+        "label": "Fee (%)",
+        "placeholder": "10",
+        "suffix": "%"
+      },
+      {
+        "id": "ads",
+        "label": "Other",
+        "placeholder": "5",
+        "prefix": "$"
+      }
+    ],
+    "results": [
+      {
+        "id": "profit",
+        "label": "Net Profit",
+        "prefix": "$"
+      },
+      {
+        "id": "margin",
+        "label": "Margin",
+        "prefix": ""
+      },
+      {
+        "id": "roi",
+        "label": "ROI",
+        "prefix": ""
+      }
+    ]
+  },
+  {
+    "slug": "landscaping",
+    "title": "Landscaping Profit Calculator",
+    "desc": "Calculate landscaping and lawn care business profits. Free for entrepreneurs.",
+    "fields": [
+      {
+        "id": "price",
+        "label": "Revenue",
+        "placeholder": "100",
+        "prefix": "$"
+      },
+      {
+        "id": "cost",
+        "label": "Cost",
+        "placeholder": "50",
+        "prefix": "$"
+      },
+      {
+        "id": "shipping",
+        "label": "Expenses",
+        "placeholder": "10",
+        "prefix": "$"
+      },
+      {
+        "id": "fee",
+        "label": "Fee (%)",
+        "placeholder": "10",
+        "suffix": "%"
+      },
+      {
+        "id": "ads",
+        "label": "Other",
+        "placeholder": "5",
+        "prefix": "$"
+      }
+    ],
+    "results": [
+      {
+        "id": "profit",
+        "label": "Net Profit",
+        "prefix": "$"
+      },
+      {
+        "id": "margin",
+        "label": "Margin",
+        "prefix": ""
+      },
+      {
+        "id": "roi",
+        "label": "ROI",
+        "prefix": ""
+      }
+    ]
+  },
+  {
+    "slug": "tutoring",
+    "title": "Tutoring Profit Calculator",
+    "desc": "Calculate online and in-person tutoring profits. Free for entrepreneurs.",
+    "fields": [
+      {
+        "id": "price",
+        "label": "Revenue",
+        "placeholder": "100",
+        "prefix": "$"
+      },
+      {
+        "id": "cost",
+        "label": "Cost",
+        "placeholder": "50",
+        "prefix": "$"
+      },
+      {
+        "id": "shipping",
+        "label": "Expenses",
+        "placeholder": "10",
+        "prefix": "$"
+      },
+      {
+        "id": "fee",
+        "label": "Fee (%)",
+        "placeholder": "10",
+        "suffix": "%"
+      },
+      {
+        "id": "ads",
+        "label": "Other",
+        "placeholder": "5",
+        "prefix": "$"
+      }
+    ],
+    "results": [
+      {
+        "id": "profit",
+        "label": "Net Profit",
+        "prefix": "$"
+      },
+      {
+        "id": "margin",
+        "label": "Margin",
+        "prefix": ""
+      },
+      {
+        "id": "roi",
+        "label": "ROI",
+        "prefix": ""
+      }
+    ]
+  },
+  {
+    "slug": "photography",
+    "title": "Photography Profit Calculator",
+    "desc": "Calculate photography session and wedding profits. Free for entrepreneurs.",
+    "fields": [
+      {
+        "id": "price",
+        "label": "Revenue",
+        "placeholder": "100",
+        "prefix": "$"
+      },
+      {
+        "id": "cost",
+        "label": "Cost",
+        "placeholder": "50",
+        "prefix": "$"
+      },
+      {
+        "id": "shipping",
+        "label": "Expenses",
+        "placeholder": "10",
+        "prefix": "$"
+      },
+      {
+        "id": "fee",
+        "label": "Fee (%)",
+        "placeholder": "10",
+        "suffix": "%"
+      },
+      {
+        "id": "ads",
+        "label": "Other",
+        "placeholder": "5",
+        "prefix": "$"
+      }
+    ],
+    "results": [
+      {
+        "id": "profit",
+        "label": "Net Profit",
+        "prefix": "$"
+      },
+      {
+        "id": "margin",
+        "label": "Margin",
+        "prefix": ""
+      },
+      {
+        "id": "roi",
+        "label": "ROI",
+        "prefix": ""
+      }
+    ]
+  },
+  {
+    "slug": "bakery",
+    "title": "Bakery Profit Calculator",
+    "desc": "Calculate bakery product cost and profit per item. Free for entrepreneurs.",
+    "fields": [
+      {
+        "id": "price",
+        "label": "Revenue",
+        "placeholder": "100",
+        "prefix": "$"
+      },
+      {
+        "id": "cost",
+        "label": "Cost",
+        "placeholder": "50",
+        "prefix": "$"
+      },
+      {
+        "id": "shipping",
+        "label": "Expenses",
+        "placeholder": "10",
+        "prefix": "$"
+      },
+      {
+        "id": "fee",
+        "label": "Fee (%)",
+        "placeholder": "10",
+        "suffix": "%"
+      },
+      {
+        "id": "ads",
+        "label": "Other",
+        "placeholder": "5",
+        "prefix": "$"
+      }
+    ],
+    "results": [
+      {
+        "id": "profit",
+        "label": "Net Profit",
+        "prefix": "$"
+      },
+      {
+        "id": "margin",
+        "label": "Margin",
+        "prefix": ""
+      },
+      {
+        "id": "roi",
+        "label": "ROI",
+        "prefix": ""
+      }
+    ]
+  },
+  {
+    "slug": "salon",
+    "title": "Hair Salon Profit Calculator",
+    "desc": "Calculate salon service pricing and profits. Free for entrepreneurs.",
+    "fields": [
+      {
+        "id": "price",
+        "label": "Revenue",
+        "placeholder": "100",
+        "prefix": "$"
+      },
+      {
+        "id": "cost",
+        "label": "Cost",
+        "placeholder": "50",
+        "prefix": "$"
+      },
+      {
+        "id": "shipping",
+        "label": "Expenses",
+        "placeholder": "10",
+        "prefix": "$"
+      },
+      {
+        "id": "fee",
+        "label": "Fee (%)",
+        "placeholder": "10",
+        "suffix": "%"
+      },
+      {
+        "id": "ads",
+        "label": "Other",
+        "placeholder": "5",
+        "prefix": "$"
+      }
+    ],
+    "results": [
+      {
+        "id": "profit",
+        "label": "Net Profit",
+        "prefix": "$"
+      },
+      {
+        "id": "margin",
+        "label": "Margin",
+        "prefix": ""
+      },
+      {
+        "id": "roi",
+        "label": "ROI",
+        "prefix": ""
+      }
+    ]
+  },
+  {
+    "slug": "daycare",
+    "title": "Daycare Profit Calculator",
+    "desc": "Calculate home daycare and childcare center profits. Free for entrepreneurs.",
+    "fields": [
+      {
+        "id": "price",
+        "label": "Revenue",
+        "placeholder": "100",
+        "prefix": "$"
+      },
+      {
+        "id": "cost",
+        "label": "Cost",
+        "placeholder": "50",
+        "prefix": "$"
+      },
+      {
+        "id": "shipping",
+        "label": "Expenses",
+        "placeholder": "10",
+        "prefix": "$"
+      },
+      {
+        "id": "fee",
+        "label": "Fee (%)",
+        "placeholder": "10",
+        "suffix": "%"
+      },
+      {
+        "id": "ads",
+        "label": "Other",
+        "placeholder": "5",
+        "prefix": "$"
+      }
+    ],
+    "results": [
+      {
+        "id": "profit",
+        "label": "Net Profit",
+        "prefix": "$"
+      },
+      {
+        "id": "margin",
+        "label": "Margin",
+        "prefix": ""
+      },
+      {
+        "id": "roi",
+        "label": "ROI",
+        "prefix": ""
+      }
+    ]
+  },
+  {
+    "slug": "plumbing",
+    "title": "Plumbing Profit Calculator",
+    "desc": "Calculate plumbing service call profits. Free for entrepreneurs.",
+    "fields": [
+      {
+        "id": "price",
+        "label": "Revenue",
+        "placeholder": "100",
+        "prefix": "$"
+      },
+      {
+        "id": "cost",
+        "label": "Cost",
+        "placeholder": "50",
+        "prefix": "$"
+      },
+      {
+        "id": "shipping",
+        "label": "Expenses",
+        "placeholder": "10",
+        "prefix": "$"
+      },
+      {
+        "id": "fee",
+        "label": "Fee (%)",
+        "placeholder": "10",
+        "suffix": "%"
+      },
+      {
+        "id": "ads",
+        "label": "Other",
+        "placeholder": "5",
+        "prefix": "$"
+      }
+    ],
+    "results": [
+      {
+        "id": "profit",
+        "label": "Net Profit",
+        "prefix": "$"
+      },
+      {
+        "id": "margin",
+        "label": "Margin",
+        "prefix": ""
+      },
+      {
+        "id": "roi",
+        "label": "ROI",
+        "prefix": ""
+      }
+    ]
+  },
+  {
+    "slug": "electrician",
+    "title": "Electrician Profit Calculator",
+    "desc": "Calculate electrical service job profits. Free for entrepreneurs.",
+    "fields": [
+      {
+        "id": "price",
+        "label": "Revenue",
+        "placeholder": "100",
+        "prefix": "$"
+      },
+      {
+        "id": "cost",
+        "label": "Cost",
+        "placeholder": "50",
+        "prefix": "$"
+      },
+      {
+        "id": "shipping",
+        "label": "Expenses",
+        "placeholder": "10",
+        "prefix": "$"
+      },
+      {
+        "id": "fee",
+        "label": "Fee (%)",
+        "placeholder": "10",
+        "suffix": "%"
+      },
+      {
+        "id": "ads",
+        "label": "Other",
+        "placeholder": "5",
+        "prefix": "$"
+      }
+    ],
+    "results": [
+      {
+        "id": "profit",
+        "label": "Net Profit",
+        "prefix": "$"
+      },
+      {
+        "id": "margin",
+        "label": "Margin",
+        "prefix": ""
+      },
+      {
+        "id": "roi",
+        "label": "ROI",
+        "prefix": ""
+      }
+    ]
+  },
+  {
+    "slug": "hvac",
+    "title": "HVAC Profit Calculator",
+    "desc": "Calculate HVAC installation and repair job profits. Free for entrepreneurs.",
+    "fields": [
+      {
+        "id": "price",
+        "label": "Revenue",
+        "placeholder": "100",
+        "prefix": "$"
+      },
+      {
+        "id": "cost",
+        "label": "Cost",
+        "placeholder": "50",
+        "prefix": "$"
+      },
+      {
+        "id": "shipping",
+        "label": "Expenses",
+        "placeholder": "10",
+        "prefix": "$"
+      },
+      {
+        "id": "fee",
+        "label": "Fee (%)",
+        "placeholder": "10",
+        "suffix": "%"
+      },
+      {
+        "id": "ads",
+        "label": "Other",
+        "placeholder": "5",
+        "prefix": "$"
+      }
+    ],
+    "results": [
+      {
+        "id": "profit",
+        "label": "Net Profit",
+        "prefix": "$"
+      },
+      {
+        "id": "margin",
+        "label": "Margin",
+        "prefix": ""
+      },
+      {
+        "id": "roi",
+        "label": "ROI",
+        "prefix": ""
+      }
+    ]
+  },
+  {
+    "slug": "roofing",
+    "title": "Roofing Profit Calculator",
+    "desc": "Calculate roofing job profits including materials. Free for entrepreneurs.",
+    "fields": [
+      {
+        "id": "price",
+        "label": "Revenue",
+        "placeholder": "100",
+        "prefix": "$"
+      },
+      {
+        "id": "cost",
+        "label": "Cost",
+        "placeholder": "50",
+        "prefix": "$"
+      },
+      {
+        "id": "shipping",
+        "label": "Expenses",
+        "placeholder": "10",
+        "prefix": "$"
+      },
+      {
+        "id": "fee",
+        "label": "Fee (%)",
+        "placeholder": "10",
+        "suffix": "%"
+      },
+      {
+        "id": "ads",
+        "label": "Other",
+        "placeholder": "5",
+        "prefix": "$"
+      }
+    ],
+    "results": [
+      {
+        "id": "profit",
+        "label": "Net Profit",
+        "prefix": "$"
+      },
+      {
+        "id": "margin",
+        "label": "Margin",
+        "prefix": ""
+      },
+      {
+        "id": "roi",
+        "label": "ROI",
+        "prefix": ""
+      }
+    ]
+  },
+  {
+    "slug": "saas-mrr",
+    "title": "SaaS MRR Profit Calculator",
+    "desc": "Calculate SaaS monthly recurring revenue and churn. Free for entrepreneurs.",
+    "fields": [
+      {
+        "id": "price",
+        "label": "Revenue",
+        "placeholder": "100",
+        "prefix": "$"
+      },
+      {
+        "id": "cost",
+        "label": "Cost",
+        "placeholder": "50",
+        "prefix": "$"
+      },
+      {
+        "id": "shipping",
+        "label": "Expenses",
+        "placeholder": "10",
+        "prefix": "$"
+      },
+      {
+        "id": "fee",
+        "label": "Fee (%)",
+        "placeholder": "10",
+        "suffix": "%"
+      },
+      {
+        "id": "ads",
+        "label": "Other",
+        "placeholder": "5",
+        "prefix": "$"
+      }
+    ],
+    "results": [
+      {
+        "id": "profit",
+        "label": "Net Profit",
+        "prefix": "$"
+      },
+      {
+        "id": "margin",
+        "label": "Margin",
+        "prefix": ""
+      },
+      {
+        "id": "roi",
+        "label": "ROI",
+        "prefix": ""
+      }
+    ]
+  },
+  {
+    "slug": "youtube-channel",
+    "title": "YouTube Channel Profit Calculator",
+    "desc": "Calculate YouTube ad revenue profits. Free for entrepreneurs.",
+    "fields": [
+      {
+        "id": "price",
+        "label": "Revenue",
+        "placeholder": "100",
+        "prefix": "$"
+      },
+      {
+        "id": "cost",
+        "label": "Cost",
+        "placeholder": "50",
+        "prefix": "$"
+      },
+      {
+        "id": "shipping",
+        "label": "Expenses",
+        "placeholder": "10",
+        "prefix": "$"
+      },
+      {
+        "id": "fee",
+        "label": "Fee (%)",
+        "placeholder": "10",
+        "suffix": "%"
+      },
+      {
+        "id": "ads",
+        "label": "Other",
+        "placeholder": "5",
+        "prefix": "$"
+      }
+    ],
+    "results": [
+      {
+        "id": "profit",
+        "label": "Net Profit",
+        "prefix": "$"
+      },
+      {
+        "id": "margin",
+        "label": "Margin",
+        "prefix": ""
+      },
+      {
+        "id": "roi",
+        "label": "ROI",
+        "prefix": ""
+      }
+    ]
+  },
+  {
+    "slug": "podcast",
+    "title": "Podcast Profit Calculator",
+    "desc": "Calculate podcast sponsorship and ad revenue profits. Free for entrepreneurs.",
+    "fields": [
+      {
+        "id": "price",
+        "label": "Revenue",
+        "placeholder": "100",
+        "prefix": "$"
+      },
+      {
+        "id": "cost",
+        "label": "Cost",
+        "placeholder": "50",
+        "prefix": "$"
+      },
+      {
+        "id": "shipping",
+        "label": "Expenses",
+        "placeholder": "10",
+        "prefix": "$"
+      },
+      {
+        "id": "fee",
+        "label": "Fee (%)",
+        "placeholder": "10",
+        "suffix": "%"
+      },
+      {
+        "id": "ads",
+        "label": "Other",
+        "placeholder": "5",
+        "prefix": "$"
+      }
+    ],
+    "results": [
+      {
+        "id": "profit",
+        "label": "Net Profit",
+        "prefix": "$"
+      },
+      {
+        "id": "margin",
+        "label": "Margin",
+        "prefix": ""
+      },
+      {
+        "id": "roi",
+        "label": "ROI",
+        "prefix": ""
+      }
+    ]
+  },
+  {
+    "slug": "newsletter",
+    "title": "Email Newsletter Profit Calculator",
+    "desc": "Calculate paid newsletter and sponsorship revenue. Free for entrepreneurs.",
+    "fields": [
+      {
+        "id": "price",
+        "label": "Revenue",
+        "placeholder": "100",
+        "prefix": "$"
+      },
+      {
+        "id": "cost",
+        "label": "Cost",
+        "placeholder": "50",
+        "prefix": "$"
+      },
+      {
+        "id": "shipping",
+        "label": "Expenses",
+        "placeholder": "10",
+        "prefix": "$"
+      },
+      {
+        "id": "fee",
+        "label": "Fee (%)",
+        "placeholder": "10",
+        "suffix": "%"
+      },
+      {
+        "id": "ads",
+        "label": "Other",
+        "placeholder": "5",
+        "prefix": "$"
+      }
+    ],
+    "results": [
+      {
+        "id": "profit",
+        "label": "Net Profit",
+        "prefix": "$"
+      },
+      {
+        "id": "margin",
+        "label": "Margin",
+        "prefix": ""
+      },
+      {
+        "id": "roi",
+        "label": "ROI",
+        "prefix": ""
+      }
+    ]
+  },
+  {
+    "slug": "marketing-agency",
+    "title": "Marketing Agency Profit Calculator",
+    "desc": "Calculate agency retainer profits. Free for entrepreneurs.",
+    "fields": [
+      {
+        "id": "price",
+        "label": "Revenue",
+        "placeholder": "100",
+        "prefix": "$"
+      },
+      {
+        "id": "cost",
+        "label": "Cost",
+        "placeholder": "50",
+        "prefix": "$"
+      },
+      {
+        "id": "shipping",
+        "label": "Expenses",
+        "placeholder": "10",
+        "prefix": "$"
+      },
+      {
+        "id": "fee",
+        "label": "Fee (%)",
+        "placeholder": "10",
+        "suffix": "%"
+      },
+      {
+        "id": "ads",
+        "label": "Other",
+        "placeholder": "5",
+        "prefix": "$"
+      }
+    ],
+    "results": [
+      {
+        "id": "profit",
+        "label": "Net Profit",
+        "prefix": "$"
+      },
+      {
+        "id": "margin",
+        "label": "Margin",
+        "prefix": ""
+      },
+      {
+        "id": "roi",
+        "label": "ROI",
+        "prefix": ""
+      }
+    ]
+  },
+  {
+    "slug": "web-designer",
+    "title": "Web Design Profit Calculator",
+    "desc": "Calculate web design project profits. Free for entrepreneurs.",
+    "fields": [
+      {
+        "id": "price",
+        "label": "Revenue",
+        "placeholder": "100",
+        "prefix": "$"
+      },
+      {
+        "id": "cost",
+        "label": "Cost",
+        "placeholder": "50",
+        "prefix": "$"
+      },
+      {
+        "id": "shipping",
+        "label": "Expenses",
+        "placeholder": "10",
+        "prefix": "$"
+      },
+      {
+        "id": "fee",
+        "label": "Fee (%)",
+        "placeholder": "10",
+        "suffix": "%"
+      },
+      {
+        "id": "ads",
+        "label": "Other",
+        "placeholder": "5",
+        "prefix": "$"
+      }
+    ],
+    "results": [
+      {
+        "id": "profit",
+        "label": "Net Profit",
+        "prefix": "$"
+      },
+      {
+        "id": "margin",
+        "label": "Margin",
+        "prefix": ""
+      },
+      {
+        "id": "roi",
+        "label": "ROI",
+        "prefix": ""
+      }
+    ]
+  },
+  {
+    "slug": "virtual-assistant",
+    "title": "Virtual Assistant Profit Calculator",
+    "desc": "Calculate VA service hourly profits. Free for entrepreneurs.",
+    "fields": [
+      {
+        "id": "price",
+        "label": "Revenue",
+        "placeholder": "100",
+        "prefix": "$"
+      },
+      {
+        "id": "cost",
+        "label": "Cost",
+        "placeholder": "50",
+        "prefix": "$"
+      },
+      {
+        "id": "shipping",
+        "label": "Expenses",
+        "placeholder": "10",
+        "prefix": "$"
+      },
+      {
+        "id": "fee",
+        "label": "Fee (%)",
+        "placeholder": "10",
+        "suffix": "%"
+      },
+      {
+        "id": "ads",
+        "label": "Other",
+        "placeholder": "5",
+        "prefix": "$"
+      }
+    ],
+    "results": [
+      {
+        "id": "profit",
+        "label": "Net Profit",
+        "prefix": "$"
+      },
+      {
+        "id": "margin",
+        "label": "Margin",
+        "prefix": ""
+      },
+      {
+        "id": "roi",
+        "label": "ROI",
+        "prefix": ""
+      }
+    ]
+  },
+  {
+    "slug": "stock-trader",
+    "title": "Stock Trading Profit Calculator",
+    "desc": "Calculate stock trading profits. Free for entrepreneurs.",
+    "fields": [
+      {
+        "id": "price",
+        "label": "Revenue",
+        "placeholder": "100",
+        "prefix": "$"
+      },
+      {
+        "id": "cost",
+        "label": "Cost",
+        "placeholder": "50",
+        "prefix": "$"
+      },
+      {
+        "id": "shipping",
+        "label": "Expenses",
+        "placeholder": "10",
+        "prefix": "$"
+      },
+      {
+        "id": "fee",
+        "label": "Fee (%)",
+        "placeholder": "10",
+        "suffix": "%"
+      },
+      {
+        "id": "ads",
+        "label": "Other",
+        "placeholder": "5",
+        "prefix": "$"
+      }
+    ],
+    "results": [
+      {
+        "id": "profit",
+        "label": "Net Profit",
+        "prefix": "$"
+      },
+      {
+        "id": "margin",
+        "label": "Margin",
+        "prefix": ""
+      },
+      {
+        "id": "roi",
+        "label": "ROI",
+        "prefix": ""
+      }
+    ]
+  },
+  {
+    "slug": "dividend-calc",
+    "title": "Dividend Income Profit Calculator",
+    "desc": "Calculate dividend investment income. Free for entrepreneurs.",
+    "fields": [
+      {
+        "id": "price",
+        "label": "Revenue",
+        "placeholder": "100",
+        "prefix": "$"
+      },
+      {
+        "id": "cost",
+        "label": "Cost",
+        "placeholder": "50",
+        "prefix": "$"
+      },
+      {
+        "id": "shipping",
+        "label": "Expenses",
+        "placeholder": "10",
+        "prefix": "$"
+      },
+      {
+        "id": "fee",
+        "label": "Fee (%)",
+        "placeholder": "10",
+        "suffix": "%"
+      },
+      {
+        "id": "ads",
+        "label": "Other",
+        "placeholder": "5",
+        "prefix": "$"
+      }
+    ],
+    "results": [
+      {
+        "id": "profit",
+        "label": "Net Profit",
+        "prefix": "$"
+      },
+      {
+        "id": "margin",
+        "label": "Margin",
+        "prefix": ""
+      },
+      {
+        "id": "roi",
+        "label": "ROI",
+        "prefix": ""
+      }
+    ]
+  }
+]

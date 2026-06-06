@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Calculate gym membership profit and training margins. Free for entrepreneurs.">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Gym & Fitness Profit Calculator | ProfitCalc">
+    <meta property="og:description" content="Calculate gym membership profit and training margins. Free for entrepreneurs.">
+    <link rel="canonical" href="https://calcprofit.net/gym/">
+    <title>Gym & Fitness Profit Calculator | ProfitCalc</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root{--bg:#FFF8F0;--card:#FFFDFA;--border:#F3E8D8;--text:#1C1917;--muted:#78716C;--primary:#D97706;--primary-hover:#B45309;--radius:16px}
+        *{box-sizing:border-box;margin:0;padding:0}
+        body{font-family:'DM Sans',-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+        nav{position:sticky;top:0;background:#FFFAF5;backdrop-filter:blur(8px);border-bottom:1px solid var(--border);padding:14px 24px;display:flex;justify-content:space-between;z-index:100}
+        .logo{font-weight:700;color:var(--primary);font-size:1.2rem;text-decoration:none}
+        .nav-links{display:flex;gap:20px;align-items:center}
+        .nav-links a{color:var(--muted);text-decoration:none;font-size:0.9rem;font-weight:500}
+        .nav-links a:hover{color:var(--text)}
+        .container{max-width:1100px;margin:0 auto;padding:0 24px}
+        .hero{text-align:center;padding:48px 0 32px}
+        .hero h1{font-size:2rem;font-weight:700;margin-bottom:12px;letter-spacing:-0.02em}
+        .hero p{color:var(--muted);max-width:560px;margin:0 auto;font-size:1rem}
+        .tool-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:32px 0 48px}
+        @media(max-width:768px){.tool-grid{grid-template-columns:1fr}} 
+        .tool-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;text-decoration:none;color:var(--text);transition:all .15s;box-shadow:0 1px 3px rgba(0,0,0,0.04)}
+        .tool-card:hover{border-color:var(--primary);box-shadow:0 4px 12px rgba(217,119,6,0.12);transform:translateY(-2px)}
+        .tool-card h3{font-size:1.05rem;margin-bottom:6px}
+        .tool-card p{font-size:0.85rem;color:var(--muted)}
+        .calc-section{max-width:680px;margin:0 auto;padding:40px 0}
+        .calc-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:28px;box-shadow:0 2px 8px rgba(0,0,0,0.05)}
+        .field{margin-bottom:14px}
+        .field label{display:block;font-size:0.85rem;font-weight:600;margin-bottom:4px;color:var(--text)}
+        .input-wrap{display:flex;align-items:center;border:1px solid var(--border);border-radius:10px;overflow:hidden;background:var(--bg);transition:border-color .15s}
+        .input-wrap:focus-within{border-color:var(--primary)}
+        .prefix,.suffix{padding:10px 12px;background:#F5F1EB;color:var(--muted);font-size:0.9rem;font-weight:500;white-space:nowrap}
+        .input-wrap input{flex:1;border:none;padding:10px 12px;background:transparent;color:var(--text);font-family:inherit;font-size:1rem;outline:none;min-width:0}
+        .result-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:20px;padding-top:20px;border-top:1px solid var(--border)}
+        @media(max-width:640px){.result-grid{grid-template-columns:1fr}}
+        .result-card{text-align:center;padding:14px;background:var(--bg);border-radius:10px}
+        .result-label{font-size:0.8rem;color:var(--muted);margin-bottom:4px}
+        .result-value{font-size:1.5rem;font-weight:700;color:var(--primary)}
+        .content-section{max-width:680px;margin:40px auto;padding:0 24px}
+        .content-section h2{font-size:1.2rem;margin:24px 0 10px}
+        .content-section p{color:var(--muted);margin-bottom:12px;font-size:0.95rem;line-height:1.7}
+        .cross-link{margin:40px auto;max-width:680px;padding:20px;background:#FFF7ED;border:1px solid var(--primary);border-radius:12px}
+        .cross-link strong{color:var(--primary)}
+        .cross-link a{color:var(--primary);font-weight:500}
+        .breadcrumb{font-size:0.85rem;color:var(--muted);margin-bottom:16px}
+        .breadcrumb a{color:var(--primary);text-decoration:none}
+        footer{background:#1C1917;color:#A8A29E;padding:32px;text-align:center;font-size:0.85rem;margin-top:60px}
+        footer a{color:#FB923C;text-decoration:none}
+    </style>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Gym & Fitness Profit Calculator","url":"https://calcprofit.net/gym/","description":"Calculate gym membership profit and training margins. Free for entrepreneurs.","applicationCategory":"FinanceApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I calculate profit margin?","acceptedAnswer":{"@type":"Answer","text":"Profit margin = (Revenue - Total Costs) / Revenue × 100. Use our free calculator above."}},{"@type":"Question","name":"Is ProfitCalc free?","acceptedAnswer":{"@type":"Answer","text":"Yes, completely free. No sign-up required. Calculate unlimited profits."}},{"@type":"Question","name":"What platforms does ProfitCalc support?","acceptedAnswer":{"@type":"Answer","text":"Amazon FBA, Etsy, eBay, Shopify, Dropshipping, and general business profit calculation."}}]}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://calcprofit.net/"},{"@type":"ListItem","position":2,"name":"Gym & Fitness Profit Calculator","item":"https://calcprofit.net/gym/"}]}
+    </script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z9NW1GSG04"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-Z9NW1GSG04");</script></head>
+<body>
+    <nav>
+        <a href="/" class="logo">ProfitCalc</a>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="#calculator">Calculator</a>
+            <a href="#faq">FAQ</a>
+        </div>
+    </nav>
+    <div class="container"><div class="breadcrumb"><a href="/">Home</a> / Gym & Fitness Profit Calculator</div><h1 style="font-size:1.75rem;font-weight:700;margin:24px 0 8px">Gym & Fitness Profit Calculator</h1><p style="color:var(--muted);margin-bottom:24px">Calculate gym membership profit and training margins. Free for entrepreneurs.</p></div>
+    
+    <div class="calc-section" id="calculator">
+        <div class="calc-card">
+            <div class="field">
+            <label for="price">Revenue</label>
+            <div class="input-wrap">
+                <span class="prefix">$</span>
+                <input id="price" placeholder="100" type="number" step="0.01" oninput="calc()">
+                
+            </div>
+        </div><div class="field">
+            <label for="cost">Cost</label>
+            <div class="input-wrap">
+                <span class="prefix">$</span>
+                <input id="cost" placeholder="50" type="number" step="0.01" oninput="calc()">
+                
+            </div>
+        </div><div class="field">
+            <label for="shipping">Expenses</label>
+            <div class="input-wrap">
+                <span class="prefix">$</span>
+                <input id="shipping" placeholder="10" type="number" step="0.01" oninput="calc()">
+                
+            </div>
+        </div><div class="field">
+            <label for="fee">Fee (%)</label>
+            <div class="input-wrap">
+                
+                <input id="fee" placeholder="10" type="number" step="0.01" oninput="calc()">
+                <span class="suffix">%</span>
+            </div>
+        </div><div class="field">
+            <label for="ads">Other</label>
+            <div class="input-wrap">
+                <span class="prefix">$</span>
+                <input id="ads" placeholder="5" type="number" step="0.01" oninput="calc()">
+                
+            </div>
+        </div>
+            <div class="result-grid"><div class="result-card">
+                <div class="result-label">Net Profit</div>
+                <div class="result-value" id="profit">$0.00</div>
+            </div><div class="result-card">
+                <div class="result-label">Margin</div>
+                <div class="result-value" id="margin">0.00</div>
+            </div><div class="result-card">
+                <div class="result-label">ROI</div>
+                <div class="result-value" id="roi">0.00</div>
+            </div></div>
+        </div>
+    </div>
+    <div class="content-section">
+        <h2>What is ProfitCalc?</h2>
+        <p>ProfitCalc is a free profit calculator for eCommerce sellers. Calculate your profit margins, fees, and ROI for Amazon FBA, Etsy, eBay, Shopify, and dropshipping businesses. Use ProfitCalc to make smarter pricing decisions — your go-to profit calculator for online sellers.</p>
+        <h2>How It Works</h2>
+        <p>Step 1: Enter your selling price and cost. Step 2: Add platform fees, shipping, and ad costs. Step 3: Instantly see your profit, margin, and ROI. It's that simple.</p>
+        <h2>Common Use Cases</h2>
+        <p>ProfitCalc is used by Amazon FBA sellers, Etsy shop owners, eBay resellers, Shopify merchants, and dropshipping entrepreneurs to calculate profitability before listing products.</p>
+        <h2>About Gym & Fitness Profit Calculator</h2><p>Calculate gym membership profit and training margins. Free for entrepreneurs. Built for sellers who need accurate profit calculations fast.</p>
+    </div>
+    <div class="cross-link">
+        <strong>Recommended Tools</strong> — Start selling online: <a href="https://www.shopify.com/free-trial" rel="nofollow sponsored">Shopify Free Trial</a>. Scale your Amazon business: <a href="https://www.helium10.com" rel="nofollow sponsored">Helium 10</a>. Need a store built? <a href="https://www.fiverr.com/search/gigs?query=shopify+store+builder" rel="nofollow sponsored">Fiverr Store Builders</a>. Also try our free tools: <a href="https://tracklinks.net">TrackLinks</a> for UTM tracking, <a href="https://compressnow.net">CompressNow</a> for image compression. Optimize your entire seller workflow with our free tool suite.
+    </div>
+    <div class="content-section" id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <p><strong>Q: How accurate is the profit calculation?</strong><br>A: The calculator uses the standard profit formula. Actual platform fees may vary — always verify with your platform's fee schedule.</p>
+        <p><strong>Q: Is ProfitCalc free?</strong><br>A: Yes, 100% free with no sign-up and no limits on calculations.</p>
+        <p><strong>Q: Can I use this for my Amazon FBA business?</strong><br>A: Yes — our Amazon FBA calculator includes FBA fees, referral fees, and PPC ad costs.</p>
+        <p><strong>Q: What's the difference between profit margin and ROI?</strong><br>A: Profit margin = Profit / Revenue. ROI = Profit / Investment Cost. Both are useful — margin tells you pricing efficiency, ROI tells you return on your capital.</p>
+    </div>
+    <footer>
+        <p>ProfitCalc — Free Profit Calculator for eCommerce Sellers. Amazon, Etsy, eBay, Shopify, Dropshipping.</p>
+        <p style="margin-top:8px"><a href="/">Home</a> · <a href="https://compressnow.net">CompressNow</a> · <a href="https://tracklinks.net">TrackLinks</a> · <a href="https://resizenow.net">ResizeNow</a></p>
+    </footer>
+    <script>
+    function getVal(id){return parseFloat(document.getElementById(id).value)||0;}
+    function calc(){
+        
+var price=getVal('price'),cost=getVal('cost'),shipping=getVal('shipping'),fee=getVal('fee'),ads=getVal('ads');
+var revenue=price;
+var feeAmt=revenue*(fee/100);
+var totalCost=cost+shipping+feeAmt+ads;
+var profit=revenue-totalCost;
+var margin=revenue>0?(profit/revenue*100):0;
+var roi=totalCost>0?(profit/totalCost*100):0;
+document.getElementById('profit').innerText='$'+profit.toFixed(2);
+document.getElementById('margin').innerText=margin.toFixed(1)+'%';
+document.getElementById('roi').innerText=roi.toFixed(1)+'%';
+
+    }
+    calc();
+    </script>
+</body>
+</html>
