@@ -123,7 +123,7 @@ def build_page(s, is_home=False):
     <script type="application/ld+json">
     {{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{{"@type":"ListItem","position":1,"name":"Home","item":"https://{DOMAIN}/"}},{{"@type":"ListItem","position":2,"name":"{title}","item":"https://{DOMAIN}/{slug}/"}}]}}
     </script>
-</head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z9NW1GSG04"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag("js",new Date());gtag("config","G-Z9NW1GSG04");</script></head>
 <body>
     <nav>
         <a href="/" class="logo">ProfitCalc</a>
