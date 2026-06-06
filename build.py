@@ -151,7 +151,7 @@ def build_page(s, is_home=False):
         {f'<h2>About {title}</h2><p>{desc} Built for sellers who need accurate profit calculations fast.</p>' if not is_home else ''}
     </div>
     <div class="cross-link">
-        <strong>Pro Tip</strong> — Need to build campaign tracking URLs for your store? Try <a href="https://tracklinks.net">TrackLinks</a>. Need to compress product images? <a href="https://compressnow.net">CompressNow</a>. Optimize your entire seller workflow with our free tool suite.
+        <strong>Recommended Tools</strong> — Start selling online: <a href="https://www.shopify.com/free-trial" rel="nofollow sponsored">Shopify Free Trial</a>. Scale your Amazon business: <a href="https://www.helium10.com" rel="nofollow sponsored">Helium 10</a>. Need a store built? <a href="https://www.fiverr.com/search/gigs?query=shopify+store+builder" rel="nofollow sponsored">Fiverr Store Builders</a>. Also try our free tools: <a href="https://tracklinks.net">TrackLinks</a> for UTM tracking, <a href="https://compressnow.net">CompressNow</a> for image compression. Optimize your entire seller workflow with our free tool suite.
     </div>
     <div class="content-section" id="faq">
         <h2>Frequently Asked Questions</h2>
