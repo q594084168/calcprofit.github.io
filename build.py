@@ -76,12 +76,9 @@ def build_page(s, is_home=False):
     CALC_DATA_JSON = json.dumps(calc_list, ensure_ascii=False)
 
     # ── Search dropdown (replaces card wall) ──
-    datalist_options = ''
-    for p in ALL_SCENARIOS:
-        datalist_options += '<option value="' + p["title"] + '" data-slug="' + p["slug"] + '">'
-    search_dropdown = f'''<div class="search-wrap">
-        <input type="text" id="calcSearch" class="calc-search" list="calcDatalist" placeholder="🔍  Search 100+ calculators — try 'amazon', 'etsy', 'tiktok'..." autocomplete="off" onchange="onSearchSelect(this.value)">
-        <datalist id="calcDatalist">{datalist_options}</datalist>
+    search_dropdown = '''<div class="search-wrap" id="searchWrap">
+        <input type="text" id="calcSearch" class="calc-search" placeholder="🔍  Search 100+ calculators — try 'amazon', 'etsy', 'tiktok'..." autocomplete="off">
+        <div class="search-dropdown" id="searchDropdown"></div>
     </div>'''
 
     # ── Popular calculators (shown below calculator) ──
@@ -197,7 +194,13 @@ def build_page(s, is_home=False):
         .calc-search{{width:100%;padding:14px 18px;font-size:1rem;font-family:inherit;border:2px solid var(--primary);border-radius:12px;background:var(--card);color:var(--text);outline:none;transition:border-color .15s,box-shadow .15s}}
         .calc-search:focus{{border-color:var(--primary);box-shadow:0 0 0 4px rgba(217,119,6,0.12)}}
         .calc-search::placeholder{{color:var(--muted);font-size:0.95rem}}
-        @media(max-width:640px){{.search-wrap{{padding:0 16px}}}}
+        .search-dropdown{{position:absolute;top:calc(100% + 4px);left:24px;right:24px;max-height:300px;overflow-y:auto;background:var(--card);border:1px solid var(--primary);border-radius:12px;box-shadow:0 8px 32px rgba(0,0,0,0.12);z-index:200;display:none}}
+        .search-dropdown.show{{display:block}}
+        .dd-item{{padding:11px 16px;cursor:pointer;font-size:0.9rem;color:var(--text);border-bottom:1px solid var(--border);transition:background .1s}}
+        .dd-item:last-child{{border-bottom:none;border-radius:0 0 12px 12px}}
+        .dd-item:hover{{background:#FFF7ED;color:var(--primary)}}
+        .dd-empty{{padding:16px;text-align:center;color:var(--muted);font-size:0.9rem}}
+        @media(max-width:640px){{.search-wrap{{padding:0 16px}}.search-dropdown{{left:16px;right:16px}}}}
         .popular-wrap{{max-width:680px;margin:0 auto 28px;padding:0 24px;display:flex;align-items:center;flex-wrap:wrap;gap:8px}}
         .popular-label{{font-size:0.8rem;color:var(--muted);font-weight:500;margin-right:4px}}
         .popular-chip{{display:inline-block;padding:6px 14px;font-size:0.82rem;color:var(--primary);background:#FFF7ED;border:1px solid var(--primary);border-radius:20px;text-decoration:none;transition:all .15s;white-space:nowrap}}
@@ -297,10 +300,34 @@ def build_page(s, is_home=False):
         }}
     }}
 
-    function onSearchSelect(title) {{
-        var data = ALL_CALC.find(function(c){{return c.title===title;}});
-        if(data) switchTo(data.slug);
+    function filterCalcs(q) {{
+        var dd = document.getElementById('searchDropdown');
+        if(!q) {{ dd.classList.remove('show'); return; }}
+        q = q.toLowerCase();
+        var matches = ALL_CALC.filter(function(c){{return c.title.toLowerCase().indexOf(q)!==-1;}});
+        if(!matches.length) {{ dd.innerHTML = '<div class="dd-empty">No matches</div>'; dd.classList.add('show'); return; }}
+        if(matches.length > 30) matches = matches.slice(0,30);
+        var h = '';
+        for(var i=0;i<matches.length;i++) {{
+            h += '<div class="dd-item" data-slug="'+matches[i].slug+'">'+matches[i].title+'</div>';
+        }}
+        dd.innerHTML = h;
+        dd.classList.add('show');
     }}
+    function pickCalc(slug) {{
+        document.getElementById('searchDropdown').classList.remove('show');
+        switchTo(slug);
+    }}
+    var si = document.getElementById('calcSearch');
+    si.addEventListener('input', function(){{ filterCalcs(this.value); }});
+    si.addEventListener('focus', function(){{ filterCalcs(this.value); }});
+    document.getElementById('searchDropdown').addEventListener('click', function(e) {{
+        var it = e.target.closest('.dd-item');
+        if(it) pickCalc(it.dataset.slug);
+    }});
+    document.addEventListener('click', function(e) {{
+        if(!e.target.closest('#searchWrap')) document.getElementById('searchDropdown').classList.remove('show');
+    }});
 
     switchTo(CURRENT_SLUG || '');
     if(!CURRENT_SLUG) document.getElementById('calcSearch').value = '';

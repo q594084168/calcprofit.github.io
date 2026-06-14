@@ -61,7 +61,13 @@
         .calc-search{width:100%;padding:14px 18px;font-size:1rem;font-family:inherit;border:2px solid var(--primary);border-radius:12px;background:var(--card);color:var(--text);outline:none;transition:border-color .15s,box-shadow .15s}
         .calc-search:focus{border-color:var(--primary);box-shadow:0 0 0 4px rgba(217,119,6,0.12)}
         .calc-search::placeholder{color:var(--muted);font-size:0.95rem}
-        @media(max-width:640px){.search-wrap{padding:0 16px}}
+        .search-dropdown{position:absolute;top:calc(100% + 4px);left:24px;right:24px;max-height:300px;overflow-y:auto;background:var(--card);border:1px solid var(--primary);border-radius:12px;box-shadow:0 8px 32px rgba(0,0,0,0.12);z-index:200;display:none}
+        .search-dropdown.show{display:block}
+        .dd-item{padding:11px 16px;cursor:pointer;font-size:0.9rem;color:var(--text);border-bottom:1px solid var(--border);transition:background .1s}
+        .dd-item:last-child{border-bottom:none;border-radius:0 0 12px 12px}
+        .dd-item:hover{background:#FFF7ED;color:var(--primary)}
+        .dd-empty{padding:16px;text-align:center;color:var(--muted);font-size:0.9rem}
+        @media(max-width:640px){.search-wrap{padding:0 16px}.search-dropdown{left:16px;right:16px}}
         .popular-wrap{max-width:680px;margin:0 auto 28px;padding:0 24px;display:flex;align-items:center;flex-wrap:wrap;gap:8px}
         .popular-label{font-size:0.8rem;color:var(--muted);font-weight:500;margin-right:4px}
         .popular-chip{display:inline-block;padding:6px 14px;font-size:0.82rem;color:var(--primary);background:#FFF7ED;border:1px solid var(--primary);border-radius:20px;text-decoration:none;transition:all .15s;white-space:nowrap}
@@ -87,9 +93,9 @@
         </div>
     </nav>
     <div class="container"><div class="breadcrumb"><a href="/">Home</a> / Coworking Space Profit Calculator</div><h1 style="font-size:1.75rem;font-weight:700;margin:24px 0 8px">Coworking Space Profit Calculator</h1><p style="color:var(--muted);margin-bottom:24px">Calculate coworking space membership and rental profits. Free for entrepreneurs.</p></div>
-    <div class="search-wrap">
-        <input type="text" id="calcSearch" class="calc-search" list="calcDatalist" placeholder="🔍  Search 100+ calculators — try 'amazon', 'etsy', 'tiktok'..." autocomplete="off" onchange="onSearchSelect(this.value)">
-        <datalist id="calcDatalist"><option value="Amazon FBA Profit Calculator" data-slug="amazon-fba"><option value="Etsy Fee & Profit Calculator" data-slug="etsy"><option value="eBay Profit Calculator" data-slug="ebay"><option value="Shopify Profit Margin Calculator" data-slug="shopify"><option value="Dropshipping Profit Calculator" data-slug="dropshipping"><option value="Small Business Profit Calculator" data-slug="small-business"><option value="TikTok Shop Profit Calculator" data-slug="tiktok-shop"><option value="Walmart Marketplace Profit Calculator" data-slug="walmart"><option value="Mercari Profit Calculator" data-slug="mercari"><option value="Poshmark Profit Calculator" data-slug="poshmark"><option value="Depop Profit Calculator" data-slug="depop"><option value="Whatnot Profit Calculator" data-slug="whatnot"><option value="PayPal Fee Calculator" data-slug="paypal-fee"><option value="Stripe Fee Calculator" data-slug="stripe-fee"><option value="Print on Demand Profit Calculator" data-slug="print-on-demand"><option value="Wholesale Profit Calculator" data-slug="wholesale"><option value="Retail Markup Calculator" data-slug="retail-markup"><option value="Crypto Trading Profit Calculator" data-slug="crypto-trading"><option value="Freelance Rate Calculator" data-slug="freelance-rate"><option value="Restaurant Profit Calculator" data-slug="restaurant"><option value="Real Estate Profit Calculator" data-slug="real-estate"><option value="Break Even Calculator" data-slug="break-even"><option value="Facebook Ads Profit Calculator" data-slug="facebook-ads"><option value="Google Ads Profit Calculator" data-slug="google-ads"><option value="TikTok Ads Profit Calculator" data-slug="tiktok-ads"><option value="Buy and Sell Profit Calculator" data-slug="buy-sell"><option value="Amazon UK FBA Profit Calculator" data-slug="amazon-uk"><option value="Amazon Canada FBA Profit Calculator" data-slug="amazon-canada"><option value="eBay UK Profit Calculator" data-slug="ebay-uk"><option value="Jewelry Business Profit Calculator" data-slug="jewelry"><option value="Clothing Brand Profit Calculator" data-slug="clothing"><option value="Handmade Products Profit Calculator" data-slug="handmade"><option value="Sneaker Reselling Profit Calculator" data-slug="sneakers"><option value="Book Reselling Profit Calculator" data-slug="books"><option value="Electronics Reselling Profit Calculator" data-slug="electronics"><option value="Furniture Flipping Profit Calculator" data-slug="furniture"><option value="Digital Products Profit Calculator" data-slug="digital-products"><option value="Subscription Box Profit Calculator" data-slug="subscription-box"><option value="Coffee Shop Profit Calculator" data-slug="coffee-shop"><option value="Food Truck Profit Calculator" data-slug="food-truck"><option value="Gym & Fitness Profit Calculator" data-slug="gym"><option value="Vending Machine Profit Calculator" data-slug="vending-machine"><option value="Airbnb Rental Profit Calculator" data-slug="airbnb"><option value="Cleaning Business Profit Calculator" data-slug="cleaning-business"><option value="Landscaping Profit Calculator" data-slug="landscaping"><option value="Tutoring Profit Calculator" data-slug="tutoring"><option value="Photography Profit Calculator" data-slug="photography"><option value="Bakery Profit Calculator" data-slug="bakery"><option value="Hair Salon Profit Calculator" data-slug="salon"><option value="Daycare Profit Calculator" data-slug="daycare"><option value="Plumbing Profit Calculator" data-slug="plumbing"><option value="Electrician Profit Calculator" data-slug="electrician"><option value="HVAC Profit Calculator" data-slug="hvac"><option value="Roofing Profit Calculator" data-slug="roofing"><option value="SaaS MRR Profit Calculator" data-slug="saas-mrr"><option value="YouTube Channel Profit Calculator" data-slug="youtube-channel"><option value="Podcast Profit Calculator" data-slug="podcast"><option value="Email Newsletter Profit Calculator" data-slug="newsletter"><option value="Marketing Agency Profit Calculator" data-slug="marketing-agency"><option value="Web Design Profit Calculator" data-slug="web-designer"><option value="Virtual Assistant Profit Calculator" data-slug="virtual-assistant"><option value="Stock Trading Profit Calculator" data-slug="stock-trader"><option value="Dividend Income Profit Calculator" data-slug="dividend-calc"><option value="Freelance Writing Profit Calculator" data-slug="freelance-writer"><option value="Graphic Design Profit Calculator" data-slug="graphic-designer"><option value="Video Editing Profit Calculator" data-slug="video-editor"><option value="Music Production Profit Calculator" data-slug="music-producer"><option value="Car Flipping Profit Calculator" data-slug="car-flipping"><option value="Domain Flipping Profit Calculator" data-slug="domain-flipping"><option value="Website Flipping Profit Calculator" data-slug="website-flipping"><option value="NFT Trading Profit Calculator" data-slug="nft-trading"><option value="Airbnb Experience Profit Calculator" data-slug="airbnb-experience"><option value="Rental Property Profit Calculator" data-slug="rental-property"><option value="House Flipping Profit Calculator" data-slug="house-flipping"><option value="Commercial Real Estate Profit Calculator" data-slug="commercial-realestate"><option value="ATM Business Profit Calculator" data-slug="atm-business"><option value="Ice Machine Profit Calculator" data-slug="ice-machine"><option value="Parking Lot Profit Calculator" data-slug="parking-lot"><option value="RV Rental Profit Calculator" data-slug="rv-rental"><option value="Boat Rental Profit Calculator" data-slug="boat-rental"><option value="Equipment Rental Profit Calculator" data-slug="equipment-rental"><option value="Self Storage Profit Calculator" data-slug="self-storage"><option value="Mobile Home Park Profit Calculator" data-slug="trailer-park"><option value="Billboard Advertising Profit Calculator" data-slug="billboard"><option value="Coworking Space Profit Calculator" data-slug="coworking"><option value="Ghost Kitchen Profit Calculator" data-slug="ghost-kitchen"><option value="Meal Prep Business Profit Calculator" data-slug="meal-prep"><option value="Juice/Smoothie Bar Profit Calculator" data-slug="juice-bar"><option value="Boba Tea Shop Profit Calculator" data-slug="boba-shop"><option value="Pizza Shop Profit Calculator" data-slug="pizza-shop"><option value="Food Stall/Fair Profit Calculator" data-slug="food-stall"><option value="Candle Making Profit Calculator" data-slug="candle-business"><option value="Soap Making Profit Calculator" data-slug="soap-business"><option value="Pet Treats Business Profit Calculator" data-slug="dog-treats"><option value="T-Shirt Business Profit Calculator" data-slug="tshirt-business"><option value="Sticker Business Profit Calculator" data-slug="sticker-business"><option value="3D Printing Profit Calculator" data-slug="3d-printing"><option value="Laser Engraving Profit Calculator" data-slug="laser-engraving"><option value="Embroidery Business Profit Calculator" data-slug="embroidery"><option value="Woodworking Profit Calculator" data-slug="woodworking"></datalist>
+    <div class="search-wrap" id="searchWrap">
+        <input type="text" id="calcSearch" class="calc-search" placeholder="🔍  Search 100+ calculators — try 'amazon', 'etsy', 'tiktok'..." autocomplete="off">
+        <div class="search-dropdown" id="searchDropdown"></div>
     </div>
     <div class="calc-section" id="calculator">
         <div class="calc-card">
@@ -149,7 +155,7 @@
         <h2>Who Should Use This Calculator</h2><p>This coworking space profit calculator is built for coworking space sellers, resellers, and entrepreneurs who need to know their exact profit before buying inventory or setting prices. If you sell on Coworking Space, this tool saves you from costly pricing mistakes.</p>
         <h2>Coworking Space Fees &amp; Costs Explained</h2><p>Every sale comes with costs — platform fees, payment processing, shipping, and advertising. The Coworking Space Profit Calculator helps you account for all of these in one place so you never underestimate your expenses. Enter your numbers above and see your real profit instantly.</p><h2>Typical Profit Scenario</h2><p>Let's say your revenue is $100 and your total costs (product + fees + shipping) run about 60% of the price. That leaves you roughly 40% profit — but the exact number depends on your platform's fee structure. Use the calculator above with your real numbers to find out.</p><h2>Pro Tips</h2><p>• Always factor in return costs and packaging — they add up fast.<br>• Track your actual fees over 10+ sales to get a realistic average.<br>• Run this calculator before every new product listing — don't guess your profit.<br>• Compare multiple platforms: use our Amazon FBA, Etsy, and eBay calculators side by side to find your most profitable channel.</p>
     </div>
-    <div class="content-section"><h2>Try These Related Calculators</h2><div class="tool-grid"><a href="/rental-property/" class="tool-card"><h3>Rental Property Profit Calculator</h3><p>Calculate long-term rental property cash flow and profit. Free for entrepreneurs.</p></a><a href="/food-truck/" class="tool-card"><h3>Food Truck Profit Calculator</h3><p>Calculate food truck operating profits and margins. Free for entrepreneurs.</p></a><a href="/woodworking/" class="tool-card"><h3>Woodworking Profit Calculator</h3><p>Calculate woodworking and custom furniture profits. Free for entrepreneurs.</p></a></div></div>
+    <div class="content-section"><h2>Try These Related Calculators</h2><div class="tool-grid"><a href="/car-flipping/" class="tool-card"><h3>Car Flipping Profit Calculator</h3><p>Calculate used car buying and reselling profit margins. Free for entrepreneurs.</p></a><a href="/billboard/" class="tool-card"><h3>Billboard Advertising Profit Calculator</h3><p>Calculate billboard rental and advertising profits. Free for entrepreneurs.</p></a><a href="/plumbing/" class="tool-card"><h3>Plumbing Profit Calculator</h3><p>Calculate plumbing service call profits. Free for entrepreneurs.</p></a></div></div>
     <div class="cross-link">
         <strong>Try our free tools</strong> — <a href="https://tracklinks.net">TrackLinks</a> for UTM tracking · <a href="https://compressnow.net">CompressNow</a> for images · <a href="https://resizenow.net">ResizeNow</a> for photos
     </div>
@@ -208,10 +214,34 @@
         }
     }
 
-    function onSearchSelect(title) {
-        var data = ALL_CALC.find(function(c){return c.title===title;});
-        if(data) switchTo(data.slug);
+    function filterCalcs(q) {
+        var dd = document.getElementById('searchDropdown');
+        if(!q) { dd.classList.remove('show'); return; }
+        q = q.toLowerCase();
+        var matches = ALL_CALC.filter(function(c){return c.title.toLowerCase().indexOf(q)!==-1;});
+        if(!matches.length) { dd.innerHTML = '<div class="dd-empty">No matches</div>'; dd.classList.add('show'); return; }
+        if(matches.length > 30) matches = matches.slice(0,30);
+        var h = '';
+        for(var i=0;i<matches.length;i++) {
+            h += '<div class="dd-item" data-slug="'+matches[i].slug+'">'+matches[i].title+'</div>';
+        }
+        dd.innerHTML = h;
+        dd.classList.add('show');
     }
+    function pickCalc(slug) {
+        document.getElementById('searchDropdown').classList.remove('show');
+        switchTo(slug);
+    }
+    var si = document.getElementById('calcSearch');
+    si.addEventListener('input', function(){ filterCalcs(this.value); });
+    si.addEventListener('focus', function(){ filterCalcs(this.value); });
+    document.getElementById('searchDropdown').addEventListener('click', function(e) {
+        var it = e.target.closest('.dd-item');
+        if(it) pickCalc(it.dataset.slug);
+    });
+    document.addEventListener('click', function(e) {
+        if(!e.target.closest('#searchWrap')) document.getElementById('searchDropdown').classList.remove('show');
+    });
 
     switchTo(CURRENT_SLUG || '');
     if(!CURRENT_SLUG) document.getElementById('calcSearch').value = '';
