@@ -51,6 +51,20 @@ def build_page(s, is_home=False):
 
     # ── Calculator data JSON (all pages) ──
     calc_list = []
+    # Include homepage defaults first
+    calc_list.append({
+        "slug": "",
+        "title": "Free Profit Calculator for eCommerce Sellers",
+        "fields": [{"id": "price", "label": "Selling Price", "placeholder": "29.99", "prefix": "$", "suffix": ""},
+                   {"id": "cost", "label": "Product Cost", "placeholder": "10.00", "prefix": "$", "suffix": ""},
+                   {"id": "shipping", "label": "Shipping Cost", "placeholder": "5.00", "prefix": "$", "suffix": ""},
+                   {"id": "fee", "label": "Platform Fee (%)", "placeholder": "10", "prefix": "", "suffix": "%"},
+                   {"id": "ads", "label": "Ad Spend per Unit", "placeholder": "3.00", "prefix": "$", "suffix": ""}],
+        "results": [{"id": "profit", "label": "Net Profit", "prefix": "$"},
+                     {"id": "margin", "label": "Profit Margin", "prefix": ""},
+                     {"id": "roi", "label": "ROI", "prefix": ""}],
+        "calc_js": PROFIT_CALC_JS
+    })
     for p in ALL_SCENARIOS:
         calc_list.append({
             "slug": p["slug"],
