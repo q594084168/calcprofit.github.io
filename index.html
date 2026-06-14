@@ -78,6 +78,56 @@
         </div>
     </nav>
     <div class="container hero"><h1>Free Profit Calculator for eCommerce Sellers</h1><p>Calculate profit margins, fees, and ROI for Amazon FBA, Etsy, eBay, Shopify, and dropshipping. Free, no sign-up.</p></div>
+    <div class="calc-section" id="calculator">
+        <div class="calc-card">
+            <div class="field">
+            <label for="price">Selling Price</label>
+            <div class="input-wrap">
+                <span class="prefix">$</span>
+                <input id="price" placeholder="29.99" type="number" step="0.01" oninput="calc()">
+                
+            </div>
+        </div><div class="field">
+            <label for="cost">Product Cost</label>
+            <div class="input-wrap">
+                <span class="prefix">$</span>
+                <input id="cost" placeholder="10.00" type="number" step="0.01" oninput="calc()">
+                
+            </div>
+        </div><div class="field">
+            <label for="shipping">Shipping Cost</label>
+            <div class="input-wrap">
+                <span class="prefix">$</span>
+                <input id="shipping" placeholder="5.00" type="number" step="0.01" oninput="calc()">
+                
+            </div>
+        </div><div class="field">
+            <label for="fee">Platform Fee (%)</label>
+            <div class="input-wrap">
+                
+                <input id="fee" placeholder="10" type="number" step="0.01" oninput="calc()">
+                <span class="suffix">%</span>
+            </div>
+        </div><div class="field">
+            <label for="ads">Ad Spend per Unit</label>
+            <div class="input-wrap">
+                <span class="prefix">$</span>
+                <input id="ads" placeholder="3.00" type="number" step="0.01" oninput="calc()">
+                
+            </div>
+        </div>
+            <div class="result-grid"><div class="result-card">
+                <div class="result-label">Net Profit</div>
+                <div class="result-value" id="profit">$0.00</div>
+            </div><div class="result-card">
+                <div class="result-label">Profit Margin</div>
+                <div class="result-value" id="margin">0.00</div>
+            </div><div class="result-card">
+                <div class="result-label">ROI</div>
+                <div class="result-value" id="roi">0.00</div>
+            </div></div>
+        </div>
+    </div>
     <div class="tool-grid"><a href="/amazon-fba/" class="tool-card">
                 <h3>Amazon FBA Profit Calculator</h3>
                 <p>Calculate Amazon FBA profits including referral fees, FBA fees, and PPC ad costs. Free tool for Amazon sellers.</p>
@@ -269,166 +319,116 @@
                 <p>Calculate dividend investment income. Free for entrepreneurs.</p>
             </a><a href="/freelance-writer/" class="tool-card">
                 <h3>Freelance Writing Profit Calculator</h3>
-                <p>Calculate freelance writing income and hourly rates.. Free for entrepreneurs.</p>
+                <p>Calculate freelance writing income and hourly rates. Free for entrepreneurs.</p>
             </a><a href="/graphic-designer/" class="tool-card">
                 <h3>Graphic Design Profit Calculator</h3>
-                <p>Calculate graphic design project profits and pricing.. Free for entrepreneurs.</p>
+                <p>Calculate graphic design project profits and pricing. Free for entrepreneurs.</p>
             </a><a href="/video-editor/" class="tool-card">
                 <h3>Video Editing Profit Calculator</h3>
-                <p>Calculate video editing and production project profits.. Free for entrepreneurs.</p>
+                <p>Calculate video editing and production project profits. Free for entrepreneurs.</p>
             </a><a href="/music-producer/" class="tool-card">
                 <h3>Music Production Profit Calculator</h3>
-                <p>Calculate music production and beat-selling profits.. Free for entrepreneurs.</p>
+                <p>Calculate music production and beat-selling profits. Free for entrepreneurs.</p>
             </a><a href="/car-flipping/" class="tool-card">
                 <h3>Car Flipping Profit Calculator</h3>
-                <p>Calculate used car buying and reselling profit margins.. Free for entrepreneurs.</p>
+                <p>Calculate used car buying and reselling profit margins. Free for entrepreneurs.</p>
             </a><a href="/domain-flipping/" class="tool-card">
                 <h3>Domain Flipping Profit Calculator</h3>
-                <p>Calculate domain name buying and selling profits.. Free for entrepreneurs.</p>
+                <p>Calculate domain name buying and selling profits. Free for entrepreneurs.</p>
             </a><a href="/website-flipping/" class="tool-card">
                 <h3>Website Flipping Profit Calculator</h3>
-                <p>Calculate website buying, improving, and reselling profits.. Free for entrepreneurs.</p>
+                <p>Calculate website buying, improving, and reselling profits. Free for entrepreneurs.</p>
             </a><a href="/nft-trading/" class="tool-card">
                 <h3>NFT Trading Profit Calculator</h3>
-                <p>Calculate NFT minting and trading profits after gas fees.. Free for entrepreneurs.</p>
+                <p>Calculate NFT minting and trading profits after gas fees. Free for entrepreneurs.</p>
             </a><a href="/airbnb-experience/" class="tool-card">
                 <h3>Airbnb Experience Profit Calculator</h3>
-                <p>Calculate Airbnb experience hosting profits.. Free for entrepreneurs.</p>
+                <p>Calculate Airbnb experience hosting profits. Free for entrepreneurs.</p>
             </a><a href="/rental-property/" class="tool-card">
                 <h3>Rental Property Profit Calculator</h3>
-                <p>Calculate long-term rental property cash flow and profit.. Free for entrepreneurs.</p>
+                <p>Calculate long-term rental property cash flow and profit. Free for entrepreneurs.</p>
             </a><a href="/house-flipping/" class="tool-card">
                 <h3>House Flipping Profit Calculator</h3>
-                <p>Calculate fix-and-flip house project profits.. Free for entrepreneurs.</p>
+                <p>Calculate fix-and-flip house project profits. Free for entrepreneurs.</p>
             </a><a href="/commercial-realestate/" class="tool-card">
                 <h3>Commercial Real Estate Profit Calculator</h3>
-                <p>Calculate commercial property investment profits.. Free for entrepreneurs.</p>
+                <p>Calculate commercial property investment profits. Free for entrepreneurs.</p>
             </a><a href="/atm-business/" class="tool-card">
                 <h3>ATM Business Profit Calculator</h3>
-                <p>Calculate ATM route and placement business profits.. Free for entrepreneurs.</p>
+                <p>Calculate ATM route and placement business profits. Free for entrepreneurs.</p>
             </a><a href="/ice-machine/" class="tool-card">
                 <h3>Ice Machine Profit Calculator</h3>
-                <p>Calculate ice vending machine business profits.. Free for entrepreneurs.</p>
+                <p>Calculate ice vending machine business profits. Free for entrepreneurs.</p>
             </a><a href="/parking-lot/" class="tool-card">
                 <h3>Parking Lot Profit Calculator</h3>
-                <p>Calculate parking lot and garage business profits.. Free for entrepreneurs.</p>
+                <p>Calculate parking lot and garage business profits. Free for entrepreneurs.</p>
             </a><a href="/rv-rental/" class="tool-card">
                 <h3>RV Rental Profit Calculator</h3>
-                <p>Calculate RV and camper rental business profits.. Free for entrepreneurs.</p>
+                <p>Calculate RV and camper rental business profits. Free for entrepreneurs.</p>
             </a><a href="/boat-rental/" class="tool-card">
                 <h3>Boat Rental Profit Calculator</h3>
-                <p>Calculate boat and watercraft rental profits.. Free for entrepreneurs.</p>
+                <p>Calculate boat and watercraft rental profits. Free for entrepreneurs.</p>
             </a><a href="/equipment-rental/" class="tool-card">
                 <h3>Equipment Rental Profit Calculator</h3>
-                <p>Calculate construction equipment rental profits.. Free for entrepreneurs.</p>
+                <p>Calculate construction equipment rental profits. Free for entrepreneurs.</p>
             </a><a href="/self-storage/" class="tool-card">
                 <h3>Self Storage Profit Calculator</h3>
-                <p>Calculate self-storage facility development profits.. Free for entrepreneurs.</p>
+                <p>Calculate self-storage facility development profits. Free for entrepreneurs.</p>
             </a><a href="/trailer-park/" class="tool-card">
                 <h3>Mobile Home Park Profit Calculator</h3>
-                <p>Calculate mobile home park investment returns.. Free for entrepreneurs.</p>
+                <p>Calculate mobile home park investment returns. Free for entrepreneurs.</p>
             </a><a href="/billboard/" class="tool-card">
                 <h3>Billboard Advertising Profit Calculator</h3>
-                <p>Calculate billboard rental and advertising profits.. Free for entrepreneurs.</p>
+                <p>Calculate billboard rental and advertising profits. Free for entrepreneurs.</p>
             </a><a href="/coworking/" class="tool-card">
                 <h3>Coworking Space Profit Calculator</h3>
-                <p>Calculate coworking space membership and rental profits.. Free for entrepreneurs.</p>
+                <p>Calculate coworking space membership and rental profits. Free for entrepreneurs.</p>
             </a><a href="/ghost-kitchen/" class="tool-card">
                 <h3>Ghost Kitchen Profit Calculator</h3>
-                <p>Calculate delivery-only restaurant kitchen profits.. Free for entrepreneurs.</p>
+                <p>Calculate delivery-only restaurant kitchen profits. Free for entrepreneurs.</p>
             </a><a href="/meal-prep/" class="tool-card">
                 <h3>Meal Prep Business Profit Calculator</h3>
-                <p>Calculate weekly meal prep service profits.. Free for entrepreneurs.</p>
+                <p>Calculate weekly meal prep service profits. Free for entrepreneurs.</p>
             </a><a href="/juice-bar/" class="tool-card">
                 <h3>Juice/Smoothie Bar Profit Calculator</h3>
-                <p>Calculate juice and smoothie bar drink profits.. Free for entrepreneurs.</p>
+                <p>Calculate juice and smoothie bar drink profits. Free for entrepreneurs.</p>
             </a><a href="/boba-shop/" class="tool-card">
                 <h3>Boba Tea Shop Profit Calculator</h3>
-                <p>Calculate bubble tea shop drink profitability.. Free for entrepreneurs.</p>
+                <p>Calculate bubble tea shop drink profitability. Free for entrepreneurs.</p>
             </a><a href="/pizza-shop/" class="tool-card">
                 <h3>Pizza Shop Profit Calculator</h3>
-                <p>Calculate pizzeria profit per pizza and delivery.. Free for entrepreneurs.</p>
+                <p>Calculate pizzeria profit per pizza and delivery. Free for entrepreneurs.</p>
             </a><a href="/food-stall/" class="tool-card">
                 <h3>Food Stall/Fair Profit Calculator</h3>
-                <p>Calculate fair and market food stall profits.. Free for entrepreneurs.</p>
+                <p>Calculate fair and market food stall profits. Free for entrepreneurs.</p>
             </a><a href="/candle-business/" class="tool-card">
                 <h3>Candle Making Profit Calculator</h3>
-                <p>Calculate handmade candle business profits.. Free for entrepreneurs.</p>
+                <p>Calculate handmade candle business profits. Free for entrepreneurs.</p>
             </a><a href="/soap-business/" class="tool-card">
                 <h3>Soap Making Profit Calculator</h3>
-                <p>Calculate handmade soap and skincare profits.. Free for entrepreneurs.</p>
+                <p>Calculate handmade soap and skincare profits. Free for entrepreneurs.</p>
             </a><a href="/dog-treats/" class="tool-card">
                 <h3>Pet Treats Business Profit Calculator</h3>
-                <p>Calculate homemade dog treat business profits.. Free for entrepreneurs.</p>
+                <p>Calculate homemade dog treat business profits. Free for entrepreneurs.</p>
             </a><a href="/tshirt-business/" class="tool-card">
                 <h3>T-Shirt Business Profit Calculator</h3>
-                <p>Calculate custom t-shirt printing and selling profits.. Free for entrepreneurs.</p>
+                <p>Calculate custom t-shirt printing and selling profits. Free for entrepreneurs.</p>
             </a><a href="/sticker-business/" class="tool-card">
                 <h3>Sticker Business Profit Calculator</h3>
-                <p>Calculate vinyl sticker and decal business profits.. Free for entrepreneurs.</p>
+                <p>Calculate vinyl sticker and decal business profits. Free for entrepreneurs.</p>
             </a><a href="/3d-printing/" class="tool-card">
                 <h3>3D Printing Profit Calculator</h3>
-                <p>Calculate 3D printing service and product profits.. Free for entrepreneurs.</p>
+                <p>Calculate 3D printing service and product profits. Free for entrepreneurs.</p>
             </a><a href="/laser-engraving/" class="tool-card">
                 <h3>Laser Engraving Profit Calculator</h3>
-                <p>Calculate laser engraving business project profits.. Free for entrepreneurs.</p>
+                <p>Calculate laser engraving business project profits. Free for entrepreneurs.</p>
             </a><a href="/embroidery/" class="tool-card">
                 <h3>Embroidery Business Profit Calculator</h3>
-                <p>Calculate custom embroidery and apparel profits.. Free for entrepreneurs.</p>
+                <p>Calculate custom embroidery and apparel profits. Free for entrepreneurs.</p>
             </a><a href="/woodworking/" class="tool-card">
                 <h3>Woodworking Profit Calculator</h3>
-                <p>Calculate woodworking and custom furniture profits.. Free for entrepreneurs.</p>
+                <p>Calculate woodworking and custom furniture profits. Free for entrepreneurs.</p>
             </a></div>
-    <div class="calc-section" id="calculator">
-        <div class="calc-card">
-            <div class="field">
-            <label for="price">Selling Price</label>
-            <div class="input-wrap">
-                <span class="prefix">$</span>
-                <input id="price" placeholder="29.99" type="number" step="0.01" oninput="calc()">
-                
-            </div>
-        </div><div class="field">
-            <label for="cost">Product Cost</label>
-            <div class="input-wrap">
-                <span class="prefix">$</span>
-                <input id="cost" placeholder="10.00" type="number" step="0.01" oninput="calc()">
-                
-            </div>
-        </div><div class="field">
-            <label for="shipping">Shipping Cost</label>
-            <div class="input-wrap">
-                <span class="prefix">$</span>
-                <input id="shipping" placeholder="5.00" type="number" step="0.01" oninput="calc()">
-                
-            </div>
-        </div><div class="field">
-            <label for="fee">Platform Fee (%)</label>
-            <div class="input-wrap">
-                
-                <input id="fee" placeholder="10" type="number" step="0.01" oninput="calc()">
-                <span class="suffix">%</span>
-            </div>
-        </div><div class="field">
-            <label for="ads">Ad Spend per Unit</label>
-            <div class="input-wrap">
-                <span class="prefix">$</span>
-                <input id="ads" placeholder="3.00" type="number" step="0.01" oninput="calc()">
-                
-            </div>
-        </div>
-            <div class="result-grid"><div class="result-card">
-                <div class="result-label">Net Profit</div>
-                <div class="result-value" id="profit">$0.00</div>
-            </div><div class="result-card">
-                <div class="result-label">Profit Margin</div>
-                <div class="result-value" id="margin">0.00</div>
-            </div><div class="result-card">
-                <div class="result-label">ROI</div>
-                <div class="result-value" id="roi">0.00</div>
-            </div></div>
-        </div>
-    </div>
     <div class="content-section">
         <h2>What is ProfitCalc?</h2>
         <p>ProfitCalc is a free profit calculator for eCommerce sellers. With 89+ specialized calculators covering Amazon FBA, Etsy, eBay, Shopify, Dropshipping, and niche platforms like Depop, Poshmark, and Whatnot — we help you calculate your exact profit margins, fees, and ROI before you invest a dollar. No sign-up. No limits. Just accurate profit calculations.</p>
