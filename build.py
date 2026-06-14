@@ -201,13 +201,13 @@ def build_page(s, is_home=False):
         </div>
     </nav>
     {f'<div class="container hero"><h1>{title}</h1><p>{desc}</p></div>' if is_home else f'<div class="container"><div class="breadcrumb"><a href="/">Home</a> / {title}</div><h1 style="font-size:1.75rem;font-weight:700;margin:24px 0 8px">{title}</h1><p style="color:var(--muted);margin-bottom:24px">{desc}</p></div>'}
+    {search_dropdown}
     <div class="calc-section" id="calculator">
         <div class="calc-card">
             {field_html}
             {result_cards}
         </div>
     </div>
-    {search_dropdown}
     <div class="content-section">
         {gen_about_title}
         <p>{gen_about_body}</p>
