@@ -332,7 +332,7 @@ def build_page(s, is_home=False):
         for(var i=0;i<matches.length;i++) {{
             var m = matches[i];
             var activeClass = (i===activeIdx) ? ' active' : '';
-            html += '<div class="search-item'+activeClass+'" data-slug="'+m.slug+'" onmousedown="selectCalc(\''+m.slug+'\')">';
+            html += '<div class="search-item'+activeClass+'" data-slug="'+m.slug+'">';
             html += '<div class="si-title">'+m.title+'</div>';
             html += '</div>';
         }}
@@ -377,6 +377,11 @@ def build_page(s, is_home=False):
             dropdown.classList.remove('show');
             activeIdx = -1;
         }}
+    }});
+
+    dropdown.addEventListener('click', function(e) {{
+        var item = e.target.closest('.search-item');
+        if(item) selectCalc(item.dataset.slug);
     }});
 
     document.addEventListener('click', function(e) {{

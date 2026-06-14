@@ -157,7 +157,7 @@
         <h2>Who Should Use This Calculator</h2><p>This boba tea shop profit calculator is built for boba tea shop sellers, resellers, and entrepreneurs who need to know their exact profit before buying inventory or setting prices. If you sell on Boba Tea Shop, this tool saves you from costly pricing mistakes.</p>
         <h2>Boba Tea Shop Fees &amp; Costs Explained</h2><p>Every sale comes with costs — platform fees, payment processing, shipping, and advertising. The Boba Tea Shop Profit Calculator helps you account for all of these in one place so you never underestimate your expenses. Enter your numbers above and see your real profit instantly.</p><h2>Typical Profit Scenario</h2><p>Let's say your revenue is $100 and your total costs (product + fees + shipping) run about 60% of the price. That leaves you roughly 40% profit — but the exact number depends on your platform's fee structure. Use the calculator above with your real numbers to find out.</p><h2>Pro Tips</h2><p>• Always factor in return costs and packaging — they add up fast.<br>• Track your actual fees over 10+ sales to get a realistic average.<br>• Run this calculator before every new product listing — don't guess your profit.<br>• Compare multiple platforms: use our Amazon FBA, Etsy, and eBay calculators side by side to find your most profitable channel.</p>
     </div>
-    <div class="content-section"><h2>Try These Related Calculators</h2><div class="tool-grid"><a href="/amazon-canada/" class="tool-card"><h3>Amazon Canada FBA Profit Calculator</h3><p>Calculate Canadian Amazon seller profits including GST. Free for entrepreneurs.</p></a><a href="/subscription-box/" class="tool-card"><h3>Subscription Box Profit Calculator</h3><p>Calculate subscription box business profits. Free for entrepreneurs.</p></a><a href="/coffee-shop/" class="tool-card"><h3>Coffee Shop Profit Calculator</h3><p>Calculate coffee shop drink and food profitability. Free for entrepreneurs.</p></a></div></div>
+    <div class="content-section"><h2>Try These Related Calculators</h2><div class="tool-grid"><a href="/coworking/" class="tool-card"><h3>Coworking Space Profit Calculator</h3><p>Calculate coworking space membership and rental profits. Free for entrepreneurs.</p></a><a href="/real-estate/" class="tool-card"><h3>Real Estate Profit Calculator</h3><p>Calculate property investment profits including closing costs and agent fees.</p></a><a href="/sticker-business/" class="tool-card"><h3>Sticker Business Profit Calculator</h3><p>Calculate vinyl sticker and decal business profits. Free for entrepreneurs.</p></a></div></div>
     <div class="cross-link">
         <strong>Try our free tools</strong> — <a href="https://tracklinks.net">TrackLinks</a> for UTM tracking · <a href="https://compressnow.net">CompressNow</a> for images · <a href="https://resizenow.net">ResizeNow</a> for photos
     </div>
@@ -246,7 +246,7 @@
         for(var i=0;i<matches.length;i++) {
             var m = matches[i];
             var activeClass = (i===activeIdx) ? ' active' : '';
-            html += '<div class="search-item'+activeClass+'" data-slug="'+m.slug+'" onmousedown="selectCalc(''+m.slug+'')">';
+            html += '<div class="search-item'+activeClass+'" data-slug="'+m.slug+'">';
             html += '<div class="si-title">'+m.title+'</div>';
             html += '</div>';
         }
@@ -291,6 +291,11 @@
             dropdown.classList.remove('show');
             activeIdx = -1;
         }
+    });
+
+    dropdown.addEventListener('click', function(e) {
+        var item = e.target.closest('.search-item');
+        if(item) selectCalc(item.dataset.slug);
     });
 
     document.addEventListener('click', function(e) {

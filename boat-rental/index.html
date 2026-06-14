@@ -157,7 +157,7 @@
         <h2>Who Should Use This Calculator</h2><p>This boat rental profit calculator is built for boat rental sellers, resellers, and entrepreneurs who need to know their exact profit before buying inventory or setting prices. If you sell on Boat Rental, this tool saves you from costly pricing mistakes.</p>
         <h2>Boat Rental Fees &amp; Costs Explained</h2><p>Every sale comes with costs — platform fees, payment processing, shipping, and advertising. The Boat Rental Profit Calculator helps you account for all of these in one place so you never underestimate your expenses. Enter your numbers above and see your real profit instantly.</p><h2>Typical Profit Scenario</h2><p>Let's say your revenue is $100 and your total costs (product + fees + shipping) run about 60% of the price. That leaves you roughly 40% profit — but the exact number depends on your platform's fee structure. Use the calculator above with your real numbers to find out.</p><h2>Pro Tips</h2><p>• Always factor in return costs and packaging — they add up fast.<br>• Track your actual fees over 10+ sales to get a realistic average.<br>• Run this calculator before every new product listing — don't guess your profit.<br>• Compare multiple platforms: use our Amazon FBA, Etsy, and eBay calculators side by side to find your most profitable channel.</p>
     </div>
-    <div class="content-section"><h2>Try These Related Calculators</h2><div class="tool-grid"><a href="/car-flipping/" class="tool-card"><h3>Car Flipping Profit Calculator</h3><p>Calculate used car buying and reselling profit margins. Free for entrepreneurs.</p></a><a href="/boba-shop/" class="tool-card"><h3>Boba Tea Shop Profit Calculator</h3><p>Calculate bubble tea shop drink profitability. Free for entrepreneurs.</p></a><a href="/daycare/" class="tool-card"><h3>Daycare Profit Calculator</h3><p>Calculate home daycare and childcare center profits. Free for entrepreneurs.</p></a></div></div>
+    <div class="content-section"><h2>Try These Related Calculators</h2><div class="tool-grid"><a href="/digital-products/" class="tool-card"><h3>Digital Products Profit Calculator</h3><p>Calculate profits from ebooks, courses, and downloads. Free for entrepreneurs.</p></a><a href="/amazon-uk/" class="tool-card"><h3>Amazon UK FBA Profit Calculator</h3><p>Calculate UK Amazon FBA profits with UK fees and VAT. Free for entrepreneurs.</p></a><a href="/self-storage/" class="tool-card"><h3>Self Storage Profit Calculator</h3><p>Calculate self-storage facility development profits. Free for entrepreneurs.</p></a></div></div>
     <div class="cross-link">
         <strong>Try our free tools</strong> — <a href="https://tracklinks.net">TrackLinks</a> for UTM tracking · <a href="https://compressnow.net">CompressNow</a> for images · <a href="https://resizenow.net">ResizeNow</a> for photos
     </div>
@@ -246,7 +246,7 @@
         for(var i=0;i<matches.length;i++) {
             var m = matches[i];
             var activeClass = (i===activeIdx) ? ' active' : '';
-            html += '<div class="search-item'+activeClass+'" data-slug="'+m.slug+'" onmousedown="selectCalc(''+m.slug+'')">';
+            html += '<div class="search-item'+activeClass+'" data-slug="'+m.slug+'">';
             html += '<div class="si-title">'+m.title+'</div>';
             html += '</div>';
         }
@@ -291,6 +291,11 @@
             dropdown.classList.remove('show');
             activeIdx = -1;
         }
+    });
+
+    dropdown.addEventListener('click', function(e) {
+        var item = e.target.closest('.search-item');
+        if(item) selectCalc(item.dataset.slug);
     });
 
     document.addEventListener('click', function(e) {
