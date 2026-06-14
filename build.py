@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """ProfitCalc Build — Profit calculators for eCommerce sellers"""
 
-import os, random
+import os, random, json
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 DOMAIN = "calcprofit.net"
@@ -49,15 +49,23 @@ def build_page(s, is_home=False):
             </div>'''
         result_cards += '</div>'
 
-    platform_cards = ""
-    if is_home:
-        platform_cards = '<div class="tool-grid">'
-        for p in ALL_SCENARIOS:
-            platform_cards += f'''<a href="/{p["slug"]}/" class="tool-card">
-                <h3>{p["title"]}</h3>
-                <p>{p["desc"]}</p>
-            </a>'''
-        platform_cards += '</div>'
+    # ── Calculator data JSON (all pages) ──
+    calc_list = []
+    for p in ALL_SCENARIOS:
+        calc_list.append({
+            "slug": p["slug"],
+            "title": p["title"],
+            "fields": [{"id": f["id"], "label": f["label"], "placeholder": f.get("placeholder",""), "prefix": f.get("prefix",""), "suffix": f.get("suffix","")} for f in p.get("fields", [])],
+            "results": [{"id": r["id"], "label": r["label"], "prefix": r.get("prefix","$")} for r in p.get("results", [])],
+            "calc_js": p.get("calc_js", "")
+        })
+    CALC_DATA_JSON = json.dumps(calc_list, ensure_ascii=False)
+
+    # ── Search dropdown (replaces card wall) ──
+    search_dropdown = f'''<div class="search-wrap" id="searchWrap">
+        <input type="text" id="calcSearch" class="calc-search" placeholder="🔍  Search 100+ calculators — try 'amazon', 'etsy', 'tiktok'..." autocomplete="off" value="{title}">
+        <div class="search-dropdown" id="searchDropdown"></div>
+    </div>'''
 
     # ── Dynamic per-page content generation ──
     tool_short = "ProfitCalc" if is_home else title.replace(" Profit Calculator","").replace(" Calculator","").replace(" Calc","").replace(" Fee &","")
@@ -159,6 +167,19 @@ def build_page(s, is_home=False):
         .breadcrumb a{{color:var(--primary);text-decoration:none}}
         footer{{background:#1C1917;color:#A8A29E;padding:32px;text-align:center;font-size:0.85rem;margin-top:60px}}
         footer a{{color:#FB923C;text-decoration:none}}
+        .search-wrap{{position:relative;max-width:680px;margin:0 auto 24px;padding:0 24px}}
+        .calc-search{{width:100%;padding:14px 18px;font-size:1rem;font-family:inherit;border:2px solid var(--border);border-radius:12px;background:var(--card);color:var(--text);outline:none;transition:border-color .15s,box-shadow .15s}}
+        .calc-search:focus{{border-color:var(--primary);box-shadow:0 0 0 4px rgba(217,119,6,0.12)}}
+        .calc-search::placeholder{{color:var(--muted);font-size:0.95rem}}
+        .search-dropdown{{position:absolute;top:100%;left:24px;right:24px;max-height:320px;overflow-y:auto;background:var(--card);border:1px solid var(--border);border-top:none;border-radius:0 0 12px 12px;box-shadow:0 8px 24px rgba(0,0,0,0.1);z-index:200;display:none}}
+        .search-dropdown.show{{display:block}}
+        .search-item{{padding:12px 18px;cursor:pointer;font-size:0.9rem;color:var(--text);border-bottom:1px solid var(--border);transition:background .1s}}
+        .search-item:last-child{{border-bottom:none}}
+        .search-item:hover,.search-item.active{{background:#FFF7ED;color:var(--primary)}}
+        .search-item .si-title{{font-weight:600}}
+        .search-item .si-desc{{font-size:0.8rem;color:var(--muted);margin-top:2px}}
+        .search-no-result{{padding:16px 18px;color:var(--muted);font-size:0.9rem;text-align:center}}
+        @media(max-width:640px){{.search-wrap{{padding:0 16px}}.search-dropdown{{left:16px;right:16px}}}}
     </style>
     <script type="application/ld+json">
     {{"@context":"https://schema.org","@type":"SoftwareApplication","name":"{title}","url":"{page_url}","description":"{desc}","applicationCategory":"FinanceApplication","operatingSystem":"All","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
@@ -186,7 +207,7 @@ def build_page(s, is_home=False):
             {result_cards}
         </div>
     </div>
-    {platform_cards}
+    {search_dropdown}
     <div class="content-section">
         {gen_about_title}
         <p>{gen_about_body}</p>
@@ -207,11 +228,154 @@ def build_page(s, is_home=False):
         <p style="margin-top:8px"><a href="/">Home</a> · <a href="https://compressnow.net">CompressNow</a> · <a href="https://tracklinks.net">TrackLinks</a> · <a href="https://resizenow.net">ResizeNow</a></p>
     </footer>
     <script>
+    var ALL_CALC = {CALC_DATA_JSON};
+    var CURRENT_SLUG = "{slug}";
+
     function getVal(id){{return parseFloat(document.getElementById(id).value)||0;}}
-    function calc(){{
-        {s.get('calc_js', '')}
+    function max(a,b){{return a>b?a:b;}}
+    var _calcFn = null;
+    function calc(){{ if(_calcFn) _calcFn(); }}
+
+    function switchTo(slug) {{
+        var data = ALL_CALC.find(function(c){{return c.slug===slug;}});
+        if(!data) return;
+        CURRENT_SLUG = data.slug;
+
+        // Update search input
+        var searchEl = document.getElementById('calcSearch');
+        if(searchEl) searchEl.value = data.title;
+
+        // Update fields
+        var card = document.querySelector('.calc-card');
+        var fields = data.fields;
+        var fieldHtml = '';
+        for(var i=0;i<5;i++) {{
+            var f = fields[i] || {{id:'f'+i,label:'',placeholder:'',prefix:'',suffix:''}};
+            var show = f.label !== '';
+            fieldHtml += '<div class="field"'+(show?'':' style="display:none"')+'>';
+            fieldHtml += '<label for="'+f.id+'">'+f.label+'</label>';
+            fieldHtml += '<div class="input-wrap">';
+            if(f.prefix) fieldHtml += '<span class="prefix">'+f.prefix+'</span>';
+            fieldHtml += '<input id="'+f.id+'" placeholder="'+f.placeholder+'" type="number" step="0.01" oninput="calc()">';
+            if(f.suffix) fieldHtml += '<span class="suffix">'+f.suffix+'</span>';
+            fieldHtml += '</div></div>';
+        }}
+
+        // Update results
+        var results = data.results;
+        var resHtml = '<div class="result-grid">';
+        for(var j=0;j<results.length;j++) {{
+            var r = results[j];
+            resHtml += '<div class="result-card"><div class="result-label">'+r.label+'</div><div class="result-value" id="'+r.id+'">'+r.prefix+'0.00</div></div>';
+        }}
+        resHtml += '</div>';
+
+        card.innerHTML = fieldHtml + resHtml;
+
+        // Switch calc logic
+        _calcFn = new Function(data.calc_js);
+        calc();
+
+        // Update URL
+        var newUrl = slug ? '/'+slug+'/' : '/';
+        if(window.location.pathname !== newUrl) {{
+            history.pushState({{slug:slug}}, data.title, newUrl);
+            document.title = data.title + ' | ProfitCalc';
+        }}
     }}
-    calc();
+
+    // ── Search dropdown ──
+    var searchInput = document.getElementById('calcSearch');
+    var dropdown = document.getElementById('searchDropdown');
+    var activeIdx = -1;
+
+    function renderDropdown(filter) {{
+        filter = (filter||'').toLowerCase();
+        var matches = ALL_CALC.filter(function(c){{
+            return c.title.toLowerCase().indexOf(filter) !== -1;
+        }});
+        if(matches.length === 0) {{
+            dropdown.innerHTML = '<div class="search-no-result">No calculators found for "'+filter+'"</div>';
+            dropdown.classList.add('show');
+            return;
+        }}
+        if(matches.length > 30) matches = matches.slice(0,30);
+        var html = '';
+        for(var i=0;i<matches.length;i++) {{
+            var m = matches[i];
+            var activeClass = (i===activeIdx) ? ' active' : '';
+            html += '<div class="search-item'+activeClass+'" data-slug="'+m.slug+'" onmousedown="selectCalc(\''+m.slug+'\')">';
+            html += '<div class="si-title">'+m.title+'</div>';
+            html += '</div>';
+        }}
+        dropdown.innerHTML = html;
+        dropdown.classList.add('show');
+    }}
+
+    function selectCalc(slug) {{
+        dropdown.classList.remove('show');
+        activeIdx = -1;
+        switchTo(slug);
+    }}
+
+    searchInput.addEventListener('input', function() {{
+        activeIdx = -1;
+        renderDropdown(this.value);
+    }});
+
+    searchInput.addEventListener('focus', function() {{
+        if(this.value === '') renderDropdown('');
+        else {{
+            var v = this.value.toLowerCase();
+            var cur = ALL_CALC.find(function(c){{return c.slug===CURRENT_SLUG;}});
+            if(cur && this.value === cur.title) this.value = '';
+            renderDropdown(this.value);
+        }}
+        this.select();
+    }});
+
+    searchInput.addEventListener('keydown', function(e) {{
+        var items = dropdown.querySelectorAll('.search-item');
+        if(e.key === 'ArrowDown') {{
+            e.preventDefault();
+            activeIdx = Math.min(activeIdx+1, items.length-1);
+            renderDropdown(this.value);
+        }} else if(e.key === 'ArrowUp') {{
+            e.preventDefault();
+            activeIdx = Math.max(activeIdx-1, -1);
+            renderDropdown(this.value);
+        }} else if(e.key === 'Enter') {{
+            e.preventDefault();
+            if(activeIdx >= 0 && items[activeIdx]) {{
+                selectCalc(items[activeIdx].dataset.slug);
+            }} else if(items.length === 1) {{
+                selectCalc(items[0].dataset.slug);
+            }}
+        }} else if(e.key === 'Escape') {{
+            dropdown.classList.remove('show');
+            activeIdx = -1;
+        }}
+    }});
+
+    document.addEventListener('click', function(e) {{
+        if(!e.target.closest('#searchWrap')) {{
+            dropdown.classList.remove('show');
+            activeIdx = -1;
+        }}
+    }});
+
+    // Init
+    switchTo(CURRENT_SLUG || '');
+    if(!CURRENT_SLUG) {{
+        var si = document.getElementById('calcSearch');
+        if(si) si.value = '';
+    }}
+
+    window.addEventListener('popstate', function(e) {{
+        if(e.state && e.state.slug !== undefined) {{
+            switchTo(e.state.slug);
+        }}
+    }});
     </script>
 </body>
 </html>"""
