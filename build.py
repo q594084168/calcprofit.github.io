@@ -60,7 +60,7 @@ def build_page(s, is_home=False):
         platform_cards += '</div>'
 
     # ── Dynamic per-page content generation ──
-    tool_short = title.replace(" Profit Calculator","").replace(" Calculator","").replace(" Calc","").replace(" Fee &","")
+    tool_short = "ProfitCalc" if is_home else title.replace(" Profit Calculator","").replace(" Calculator","").replace(" Calc","").replace(" Fee &","")
     active_labels = [f['label'] for f in fields if f.get('placeholder')]
     if len(active_labels) >= 3:
         how_steps = f"Step 1: Enter your {active_labels[0].lower()}. Step 2: Add your {active_labels[1].lower()}. Step 3: Instantly see your profit, margin, and ROI."
