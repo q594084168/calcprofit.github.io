@@ -70,6 +70,10 @@
         .search-item .si-desc{font-size:0.8rem;color:var(--muted);margin-top:2px}
         .search-no-result{padding:16px 18px;color:var(--muted);font-size:0.9rem;text-align:center}
         @media(max-width:640px){.search-wrap{padding:0 16px}.search-dropdown{left:16px;right:16px}}
+        .popular-wrap{max-width:680px;margin:0 auto 28px;padding:0 24px;display:flex;align-items:center;flex-wrap:wrap;gap:8px}
+        .popular-label{font-size:0.8rem;color:var(--muted);font-weight:500;margin-right:4px}
+        .popular-chip{display:inline-block;padding:6px 14px;font-size:0.82rem;color:var(--primary);background:#FFF7ED;border:1px solid var(--primary);border-radius:20px;text-decoration:none;transition:all .15s;white-space:nowrap}
+        .popular-chip:hover{background:var(--primary);color:#fff}
     </style>
     <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"SoftwareApplication","name":"NFT Trading Profit Calculator","url":"https://calcprofit.net/nft-trading/","description":"Calculate NFT minting and trading profits after gas fees. Free for entrepreneurs.","applicationCategory":"FinanceApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
@@ -92,7 +96,7 @@
     </nav>
     <div class="container"><div class="breadcrumb"><a href="/">Home</a> / NFT Trading Profit Calculator</div><h1 style="font-size:1.75rem;font-weight:700;margin:24px 0 8px">NFT Trading Profit Calculator</h1><p style="color:var(--muted);margin-bottom:24px">Calculate NFT minting and trading profits after gas fees. Free for entrepreneurs.</p></div>
     <div class="search-wrap" id="searchWrap">
-        <input type="text" id="calcSearch" class="calc-search" placeholder="🔍  Search 100+ calculators — try 'amazon', 'etsy', 'tiktok'..." autocomplete="off" value="NFT Trading Profit Calculator">
+        <input type="text" id="calcSearch" class="calc-search" placeholder="🔍  Search 100+ calculators — try ''amazon'', ''etsy'', ''tiktok''..." autocomplete="off">
         <div class="search-dropdown" id="searchDropdown"></div>
     </div>
     <div class="calc-section" id="calculator">
@@ -145,6 +149,7 @@
             </div></div>
         </div>
     </div>
+    <div class="popular-wrap"><span class="popular-label">Popular:</span><a href="/amazon-fba/" class="popular-chip" data-slug="amazon-fba" onclick="event.preventDefault();switchTo('amazon-fba')">Amazon FBA Profit Calculator</a><a href="/etsy/" class="popular-chip" data-slug="etsy" onclick="event.preventDefault();switchTo('etsy')">Etsy Fee & Profit Calculator</a><a href="/ebay/" class="popular-chip" data-slug="ebay" onclick="event.preventDefault();switchTo('ebay')">eBay Profit Calculator</a><a href="/shopify/" class="popular-chip" data-slug="shopify" onclick="event.preventDefault();switchTo('shopify')">Shopify Profit Margin Calculator</a><a href="/dropshipping/" class="popular-chip" data-slug="dropshipping" onclick="event.preventDefault();switchTo('dropshipping')">Dropshipping Profit Calculator</a><a href="/small-business/" class="popular-chip" data-slug="small-business" onclick="event.preventDefault();switchTo('small-business')">Small Business Profit Calculator</a></div>
     <div class="content-section">
         <h2>About the NFT Trading Profit Calculator</h2>
         <p>Calculate NFT minting and trading profits after gas fees. Free for entrepreneurs. Whether you're a new seller checking if a product is profitable, or an experienced entrepreneur optimizing margins — this calculator gives you instant clarity on your bottom line.</p>
@@ -152,7 +157,7 @@
         <h2>Who Should Use This Calculator</h2><p>This nft trading profit calculator is built for nft trading sellers, resellers, and entrepreneurs who need to know their exact profit before buying inventory or setting prices. If you sell on NFT Trading, this tool saves you from costly pricing mistakes.</p>
         <h2>NFT Trading Fees &amp; Costs Explained</h2><p>Every sale comes with costs — platform fees, payment processing, shipping, and advertising. The NFT Trading Profit Calculator helps you account for all of these in one place so you never underestimate your expenses. Enter your numbers above and see your real profit instantly.</p><h2>Typical Profit Scenario</h2><p>Let's say your revenue is $100 and your total costs (product + fees + shipping) run about 60% of the price. That leaves you roughly 40% profit — but the exact number depends on your platform's fee structure. Use the calculator above with your real numbers to find out.</p><h2>Pro Tips</h2><p>• Always factor in return costs and packaging — they add up fast.<br>• Track your actual fees over 10+ sales to get a realistic average.<br>• Run this calculator before every new product listing — don't guess your profit.<br>• Compare multiple platforms: use our Amazon FBA, Etsy, and eBay calculators side by side to find your most profitable channel.</p>
     </div>
-    <div class="content-section"><h2>Try These Related Calculators</h2><div class="tool-grid"><a href="/sticker-business/" class="tool-card"><h3>Sticker Business Profit Calculator</h3><p>Calculate vinyl sticker and decal business profits. Free for entrepreneurs.</p></a><a href="/commercial-realestate/" class="tool-card"><h3>Commercial Real Estate Profit Calculator</h3><p>Calculate commercial property investment profits. Free for entrepreneurs.</p></a><a href="/trailer-park/" class="tool-card"><h3>Mobile Home Park Profit Calculator</h3><p>Calculate mobile home park investment returns. Free for entrepreneurs.</p></a></div></div>
+    <div class="content-section"><h2>Try These Related Calculators</h2><div class="tool-grid"><a href="/podcast/" class="tool-card"><h3>Podcast Profit Calculator</h3><p>Calculate podcast sponsorship and ad revenue profits. Free for entrepreneurs.</p></a><a href="/airbnb-experience/" class="tool-card"><h3>Airbnb Experience Profit Calculator</h3><p>Calculate Airbnb experience hosting profits. Free for entrepreneurs.</p></a><a href="/car-flipping/" class="tool-card"><h3>Car Flipping Profit Calculator</h3><p>Calculate used car buying and reselling profit margins. Free for entrepreneurs.</p></a></div></div>
     <div class="cross-link">
         <strong>Try our free tools</strong> — <a href="https://tracklinks.net">TrackLinks</a> for UTM tracking · <a href="https://compressnow.net">CompressNow</a> for images · <a href="https://resizenow.net">ResizeNow</a> for photos
     </div>
@@ -261,13 +266,7 @@
     });
 
     searchInput.addEventListener('focus', function() {
-        if(this.value === '') renderDropdown('');
-        else {
-            var v = this.value.toLowerCase();
-            var cur = ALL_CALC.find(function(c){return c.slug===CURRENT_SLUG;});
-            if(cur && this.value === cur.title) this.value = '';
-            renderDropdown(this.value);
-        }
+        renderDropdown(this.value);
         this.select();
     });
 

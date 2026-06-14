@@ -70,6 +70,10 @@
         .search-item .si-desc{font-size:0.8rem;color:var(--muted);margin-top:2px}
         .search-no-result{padding:16px 18px;color:var(--muted);font-size:0.9rem;text-align:center}
         @media(max-width:640px){.search-wrap{padding:0 16px}.search-dropdown{left:16px;right:16px}}
+        .popular-wrap{max-width:680px;margin:0 auto 28px;padding:0 24px;display:flex;align-items:center;flex-wrap:wrap;gap:8px}
+        .popular-label{font-size:0.8rem;color:var(--muted);font-weight:500;margin-right:4px}
+        .popular-chip{display:inline-block;padding:6px 14px;font-size:0.82rem;color:var(--primary);background:#FFF7ED;border:1px solid var(--primary);border-radius:20px;text-decoration:none;transition:all .15s;white-space:nowrap}
+        .popular-chip:hover{background:var(--primary);color:#fff}
     </style>
     <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Free Profit Calculator for eCommerce Sellers","url":"https://calcprofit.net/","description":"Calculate profit margins, fees, and ROI for Amazon FBA, Etsy, eBay, Shopify, and dropshipping. Free, no sign-up.","applicationCategory":"FinanceApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
@@ -92,7 +96,7 @@
     </nav>
     <div class="container hero"><h1>Free Profit Calculator for eCommerce Sellers</h1><p>Calculate profit margins, fees, and ROI for Amazon FBA, Etsy, eBay, Shopify, and dropshipping. Free, no sign-up.</p></div>
     <div class="search-wrap" id="searchWrap">
-        <input type="text" id="calcSearch" class="calc-search" placeholder="🔍  Search 100+ calculators — try 'amazon', 'etsy', 'tiktok'..." autocomplete="off" value="Free Profit Calculator for eCommerce Sellers">
+        <input type="text" id="calcSearch" class="calc-search" placeholder="🔍  Search 100+ calculators — try ''amazon'', ''etsy'', ''tiktok''..." autocomplete="off">
         <div class="search-dropdown" id="searchDropdown"></div>
     </div>
     <div class="calc-section" id="calculator">
@@ -145,6 +149,7 @@
             </div></div>
         </div>
     </div>
+    <div class="popular-wrap"><span class="popular-label">Popular:</span><a href="/amazon-fba/" class="popular-chip" data-slug="amazon-fba" onclick="event.preventDefault();switchTo('amazon-fba')">Amazon FBA Profit Calculator</a><a href="/etsy/" class="popular-chip" data-slug="etsy" onclick="event.preventDefault();switchTo('etsy')">Etsy Fee & Profit Calculator</a><a href="/ebay/" class="popular-chip" data-slug="ebay" onclick="event.preventDefault();switchTo('ebay')">eBay Profit Calculator</a><a href="/shopify/" class="popular-chip" data-slug="shopify" onclick="event.preventDefault();switchTo('shopify')">Shopify Profit Margin Calculator</a><a href="/dropshipping/" class="popular-chip" data-slug="dropshipping" onclick="event.preventDefault();switchTo('dropshipping')">Dropshipping Profit Calculator</a><a href="/small-business/" class="popular-chip" data-slug="small-business" onclick="event.preventDefault();switchTo('small-business')">Small Business Profit Calculator</a></div>
     <div class="content-section">
         <h2>What is ProfitCalc?</h2>
         <p>ProfitCalc is a free profit calculator for eCommerce sellers. With 89+ specialized calculators covering Amazon FBA, Etsy, eBay, Shopify, Dropshipping, and niche platforms like Depop, Poshmark, and Whatnot — we help you calculate your exact profit margins, fees, and ROI before you invest a dollar. No sign-up. No limits. Just accurate profit calculations.</p>
@@ -261,13 +266,7 @@
     });
 
     searchInput.addEventListener('focus', function() {
-        if(this.value === '') renderDropdown('');
-        else {
-            var v = this.value.toLowerCase();
-            var cur = ALL_CALC.find(function(c){return c.slug===CURRENT_SLUG;});
-            if(cur && this.value === cur.title) this.value = '';
-            renderDropdown(this.value);
-        }
+        renderDropdown(this.value);
         this.select();
     });
 

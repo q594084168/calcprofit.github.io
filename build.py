@@ -62,10 +62,19 @@ def build_page(s, is_home=False):
     CALC_DATA_JSON = json.dumps(calc_list, ensure_ascii=False)
 
     # ── Search dropdown (replaces card wall) ──
-    search_dropdown = f'''<div class="search-wrap" id="searchWrap">
-        <input type="text" id="calcSearch" class="calc-search" placeholder="🔍  Search 100+ calculators — try 'amazon', 'etsy', 'tiktok'..." autocomplete="off" value="{title}">
+    search_dropdown = '''<div class="search-wrap" id="searchWrap">
+        <input type="text" id="calcSearch" class="calc-search" placeholder="🔍  Search 100+ calculators — try ''amazon'', ''etsy'', ''tiktok''..." autocomplete="off">
         <div class="search-dropdown" id="searchDropdown"></div>
     </div>'''
+
+    # ── Popular calculators (shown below calculator) ──
+    popular_slugs = ["amazon-fba","etsy","ebay","shopify","dropshipping","small-business"]
+    popular_cards = '<div class="popular-wrap"><span class="popular-label">Popular:</span>'
+    for ps in popular_slugs:
+        pd = next((p for p in ALL_SCENARIOS if p["slug"] == ps), None)
+        if pd:
+            popular_cards += f'<a href="/{ps}/" class="popular-chip" data-slug="{ps}" onclick="event.preventDefault();switchTo(\'{ps}\')">{pd["title"]}</a>'
+    popular_cards += '</div>'
 
     # ── Dynamic per-page content generation ──
     tool_short = "ProfitCalc" if is_home else title.replace(" Profit Calculator","").replace(" Calculator","").replace(" Calc","").replace(" Fee &","")
@@ -180,6 +189,10 @@ def build_page(s, is_home=False):
         .search-item .si-desc{{font-size:0.8rem;color:var(--muted);margin-top:2px}}
         .search-no-result{{padding:16px 18px;color:var(--muted);font-size:0.9rem;text-align:center}}
         @media(max-width:640px){{.search-wrap{{padding:0 16px}}.search-dropdown{{left:16px;right:16px}}}}
+        .popular-wrap{{max-width:680px;margin:0 auto 28px;padding:0 24px;display:flex;align-items:center;flex-wrap:wrap;gap:8px}}
+        .popular-label{{font-size:0.8rem;color:var(--muted);font-weight:500;margin-right:4px}}
+        .popular-chip{{display:inline-block;padding:6px 14px;font-size:0.82rem;color:var(--primary);background:#FFF7ED;border:1px solid var(--primary);border-radius:20px;text-decoration:none;transition:all .15s;white-space:nowrap}}
+        .popular-chip:hover{{background:var(--primary);color:#fff}}
     </style>
     <script type="application/ld+json">
     {{"@context":"https://schema.org","@type":"SoftwareApplication","name":"{title}","url":"{page_url}","description":"{desc}","applicationCategory":"FinanceApplication","operatingSystem":"All","offers":{{"@type":"Offer","price":"0","priceCurrency":"USD"}}}}
@@ -208,6 +221,7 @@ def build_page(s, is_home=False):
             {result_cards}
         </div>
     </div>
+    {popular_cards}
     <div class="content-section">
         {gen_about_title}
         <p>{gen_about_body}</p>
@@ -324,13 +338,7 @@ def build_page(s, is_home=False):
     }});
 
     searchInput.addEventListener('focus', function() {{
-        if(this.value === '') renderDropdown('');
-        else {{
-            var v = this.value.toLowerCase();
-            var cur = ALL_CALC.find(function(c){{return c.slug===CURRENT_SLUG;}});
-            if(cur && this.value === cur.title) this.value = '';
-            renderDropdown(this.value);
-        }}
+        renderDropdown(this.value);
         this.select();
     }});
 
