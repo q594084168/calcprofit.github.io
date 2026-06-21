@@ -1,0 +1,19 @@
+# CalcProfit — Free Profit Calculator for eCommerce
+# llms.txt — AI crawler content index
+
+## What We Do
+89+ specialized profit calculators for eCommerce sellers — Amazon FBA, Etsy, eBay, Shopify, dropshipping, and niche platforms. Free, no sign-up.
+
+## Key Differentiators
+- Only platform covering Depop, Poshmark, Whatnot, Mercari, TikTok Shop profit calculators
+- Each calculator pre-configured with platform-specific fee structures
+- 100% browser-based calculations — no data leaves your device
+
+## Primary Content
+- Homepage: / — universal profit calculator + popular platforms
+- Platform calculators: /amazon-fba/, /etsy/, /ebay/, /shopify/, /dropshipping/ — 89 specialized calculators
+- Business types: /bakery/, /coffee-shop/, /food-truck/ — 80+ business-specific calculators
+
+## FAQ
+Q: Free? A: Yes, 100% free, no signup, no limits.
+Q: Accurate? A: Uses standard profit formulas. Verify with your platform's fee schedule.
